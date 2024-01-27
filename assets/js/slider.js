@@ -3,15 +3,16 @@ var swiper = new Swiper(".swiper-slider", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+  speed: 1000,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 1600,
+    depth: 1200,
     modifier: 1,
     slideShadows: true,
-    scale: 1.9
+    scale: 1.5
   },
-  spaceBetween: 10,
+  spaceBetween: -400,
   loop: false,
   pagination: {
     el: ".swiper-pagination",

@@ -7,20 +7,44 @@
     <link rel="stylesheet" href="../marrix-power-1/assets/js/owlcarousel/owl.carousel.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../marrix-power-1/assets/styles/reset.css">
-    <link rel="stylesheet" href="../marrix-power-1/assets/styles/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <link rel="stylesheet" href="../marrix-power-1/assets/styles/slider.css">
+    <link rel="stylesheet" href="../marrix-power-1/assets/styles/style.css">
 
 </head>
 <body>
-    <div class="page">
-        <section class="screen screen--black">
+    <div class="preloader">
+        <div class="preloader__wrapper">
+            <div class="preloader__content-v-line"></div>
+            <div class="preloader__content">
+
+                <div class="preloader__content-line preloader__content-line--top"></div>
+                <div class="preloader__sm-square"></div>
+                <div class="preloader__main-square">
+                    <div class="preloader__main-square-firsth"></div>
+                    <div class="preloader__main-square-second"></div>
+                    <div class="preloader__main-square-third"></div>
+                </div>
+                <div class="preloader__content-line preloader__content-line--bottom"></div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-container ">
+        <section class="screen screen--black screen--main screen-item" id="section_one">
+            <div class="screen__sm-line"></div>
+            <button class="screen__skip-btn">
+                <div class="screen__skip-btn__wrapper">
+                    <span class="screen__skip-btn-line"></span>
+                    <span class="screen__skip-btn-line"></span>
+                </div>
+            </button>
             <div class="container">
                 <div class="screen__wrapper">
                     <div class="screen__wrapper-head">
-                        <div class="logo logo--head" data-aos="fade-down"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
+                        <div class="logo logo--head animate__animated animate__fadeInDown">
                             <a href="/">
                                 <img src="assets/image/marrix power.svg" alt="logo">
                             </a>
@@ -40,8 +64,8 @@
                                         <span class="burger__line-inner"></span>
                                     </div>
                                     <div class="burger__line burger__line--second">
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
+                                        <span class="burger__line-inner "></span>
+                                        <span class="burger__line-inner "></span>
                                     </div>
                                     <div class="burger__line burger__line--third">
                                         <span class="burger__line-inner"></span>
@@ -81,20 +105,143 @@
 
                     </div> <!--screen__wrapper-head-->
                     <div class="screen__wrapper-body">
-                        <h2 class="screen__title">
-                            Award-Winning
-                            Design & Software Development Company
-                        </h2>
+                        <div class="screen__title screen__title--main">
+                            <div class="screen__title-line screen__title-line--firsth animate__animated animate__fadeInUp">
+                                <svg width="728" height="104" viewBox="0 0 728 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1366_4517)">
+                                    <rect width="728" height="104" fill="none"/>
+                                    <path d="M32.32 23.36L52.56 80H37.2L33.52 68.64H18.4L14.88 80H-0.48L19.28 23.36H32.32ZM21.6 55.92H30.08L26.16 39.36H25.76L21.6 55.92ZM106.317 50.64L113.197 23.36H127.997L111.677 80H98.3969L93.3569 64.32L91.3569 51.36H91.1169L88.9569 64.24L84.4769 80H71.1969L54.7969 23.36H69.6769L76.3969 50.48L77.8369 62.48H78.2369L79.5969 50.56L85.9169 30.72H96.7969L102.637 50.64L104.477 62.48H104.717L106.317 50.64ZM163.242 23.36L183.482 80H168.122L164.442 68.64H149.322L145.802 80H130.442L150.202 23.36H163.242ZM152.522 55.92H161.002L157.082 39.36H156.682L152.522 55.92ZM225.437 80L212.317 62H209.757V80H195.277V23.36H217.917C229.597 23.36 238.637 28.72 238.957 42C238.957 52.48 234.717 58.4 227.837 60.56L243.277 80H225.437ZM209.757 49.68H218.157C227.197 49.68 227.197 36.72 218.157 36.72H209.757V49.68ZM254.996 23.36H276.196C287.556 23.36 298.196 29.12 298.196 42.32V61.36C298.196 74.4 287.556 80.08 276.196 80H254.996V23.36ZM269.396 66.56H276.676C281.556 66.56 283.796 64.08 283.796 60.4V42.72C283.796 39.04 281.476 36.72 276.676 36.72H269.396V66.56ZM338.015 50V63.6H313.055V50H338.015ZM399.129 50.64L406.009 23.36H420.809L404.489 80H391.209L386.169 64.32L384.169 51.36H383.929L381.769 64.24L377.289 80H364.009L347.609 23.36H362.489L369.209 50.48L370.649 62.48H371.049L372.409 50.56L378.729 30.72H389.609L395.449 50.64L397.289 62.48H397.529L399.129 50.64ZM447.613 23.36V80H433.293V23.36H447.613ZM464.574 80V23.36H478.174L491.854 47.52L496.654 58.88L497.054 58.8C496.974 58.8 495.534 49.04 495.454 49.04V23.36H509.694V80H495.214L482.414 57.68L477.454 46.32L477.054 46.4L478.894 57.36V80H464.574ZM526.636 80V23.36H540.236L553.916 47.52L558.716 58.88L559.116 58.8C559.036 58.8 557.596 49.04 557.516 49.04V23.36H571.756V80H557.276L544.476 57.68L539.516 46.32L539.116 46.4L540.956 57.36V80H526.636ZM603.019 23.36V80H588.699V23.36H603.019ZM619.98 80V23.36H633.58L647.26 47.52L652.06 58.88L652.46 58.8C652.38 58.8 650.94 49.04 650.86 49.04V23.36H665.1V80H650.62L637.82 57.68L632.86 46.32L632.46 46.4L634.3 57.36V80H619.98ZM722.762 34.64L710.763 40.16C707.643 32.56 695.003 34.32 695.003 41.76V61.2C695.003 70.08 711.563 70 711.563 61.2V59.12H702.523V47.12H725.323V61.2C725.323 74.24 714.443 80.8 703.083 80.8C691.883 80.8 680.683 74.24 680.683 61.2V41.76C680.683 28.96 691.883 22.56 703.083 22.56C710.443 22.56 718.843 25.6 722.762 34.64Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1366_4517">
+                                    <rect width="728" height="104" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div> <!--firsth line of title-->
+                            <div class="screen__title-line screen__title-line--second animate__animated animate__fadeInUp">
+                                <svg width="642" height="104" viewBox="0 0 642 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1366_4517)">
+                                    <rect width="642" height="104" fill="none"/>
+                                    <path d="M4.48 23.36H25.68C37.04 23.36 47.68 29.12 47.68 42.32V61.36C47.68 74.4 37.04 80.08 25.68 80H4.48V23.36ZM18.88 66.56H26.16C31.04 66.56 33.28 64.08 33.28 60.4V42.72C33.28 39.04 30.96 36.72 26.16 36.72H18.88V66.56ZM77.8194 36.8V45.6H100.779V58H77.8194V66.48H102.779V80H63.3394V23.36H102.779V36.8H77.8194ZM115.651 70.56L124.691 62.08C130.371 68.96 142.851 69.28 143.251 63.2C143.411 60 138.211 58.16 133.571 57.52C124.451 56.08 116.131 50.32 116.131 39.52C116.131 28.4 126.211 22.56 136.611 22.56C143.491 22.56 150.131 24.48 155.971 31.6L146.611 38.8C140.691 32.48 130.531 32.72 130.291 39.28C130.451 42 133.411 43.6 137.811 44.56C147.891 46.4 157.971 49.92 157.331 63.84C156.851 74.8 145.331 80.8 134.931 80.8C128.131 80.8 120.931 77.36 115.651 70.56ZM185.847 23.36V80H171.527V23.36H185.847ZM243.528 34.64L231.528 40.16C228.408 32.56 215.768 34.32 215.768 41.76V61.2C215.768 70.08 232.328 70 232.328 61.2V59.12H223.288V47.12H246.088V61.2C246.088 74.24 235.208 80.8 223.848 80.8C212.648 80.8 201.448 74.24 201.448 61.2V41.76C201.448 28.96 212.648 22.56 223.848 22.56C231.208 22.56 239.608 25.6 243.528 34.64ZM260.652 80V23.36H274.252L287.932 47.52L292.732 58.88L293.132 58.8C293.052 58.8 291.612 49.04 291.532 49.04V23.36H305.772V80H291.292L278.492 57.68L273.532 46.32L273.132 46.4L274.972 57.36V80H260.652ZM382.526 52.08L390.526 62.32L385.246 66.64L395.886 79.92H379.086L375.246 75.36C363.646 85.6 343.086 79.6 343.086 62C343.086 55.12 346.206 50.96 351.566 47.76C341.806 37.52 350.286 22.48 364.206 22.88C372.206 23.12 379.566 28.72 379.566 37.6C379.566 44.08 376.686 47.84 372.686 50.64L377.406 56.48L382.526 52.08ZM363.966 34.16C361.966 34.16 360.206 35.76 360.206 37.84C360.206 39.28 361.646 40.96 363.166 42.8C365.646 41.12 367.086 39.68 367.086 37.6C367.086 35.76 365.726 34.16 363.966 34.16ZM366.926 65.76L359.966 57.6C356.446 59.44 356.046 63.36 357.806 65.76C359.806 68.56 364.366 68.72 366.926 65.76ZM427.588 70.56L436.628 62.08C442.308 68.96 454.788 69.28 455.188 63.2C455.348 60 450.148 58.16 445.508 57.52C436.388 56.08 428.068 50.32 428.068 39.52C428.068 28.4 438.148 22.56 448.548 22.56C455.428 22.56 462.068 24.48 467.908 31.6L458.548 38.8C452.628 32.48 442.468 32.72 442.228 39.28C442.388 42 445.348 43.6 449.748 44.56C459.828 46.4 469.908 49.92 469.268 63.84C468.788 74.8 457.268 80.8 446.868 80.8C440.068 80.8 432.868 77.36 427.588 70.56ZM482.104 61.36V42C482.104 28.96 493.784 22.56 505.544 22.56C517.304 22.56 529.064 29.04 529.064 42V61.36C529.064 74.32 517.384 80.8 505.624 80.8C493.864 80.8 482.104 74.32 482.104 61.36ZM496.424 42V61.36C496.424 65.52 501.064 67.52 505.624 67.52C510.184 67.52 514.744 65.44 514.744 61.36V42C514.744 37.6 510.024 35.6 505.384 35.6C500.904 35.6 496.424 37.84 496.424 42ZM559.148 36.96V47.12H580.988V60.48H559.148V80H544.668V23.36H584.108V36.96H559.148ZM639.961 36.88H624.921V80H610.441V36.88H595.401V23.28H639.961V36.88Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1366_4517">
+                                    <rect width="642" height="104" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div> <!--second line of title-->
+                            <ul class="screen__title-line screen__title-line--middle">
+                                <li class="screen__title-line-middle-de animate__animated animate__fadeIn"
+
+                                >
+                                    <svg width="107" height="104" viewBox="0 0 107 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1366_4517)">
+                                        <rect width="107" height="104" fill="none"/>
+                                        <path d="M4.48 23.36H25.68C37.04 23.36 47.68 29.12 47.68 42.32V61.36C47.68 74.4 37.04 80.08 25.68 80H4.48V23.36ZM18.88 66.56H26.16C31.04 66.56 33.28 64.08 33.28 60.4V42.72C33.28 39.04 30.96 36.72 26.16 36.72H18.88V66.56ZM77.8194 36.8V45.6H100.779V58H77.8194V66.48H102.779V80H63.3394V23.36H102.779V36.8H77.8194Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1366_4517">
+                                        <rect width="107" height="104" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </li>
+                                <li class="screen__title-line-middle-vel animate__animated animate__fadeInDown">
+                                    <svg width="167" height="104" viewBox="0 0 167 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="167" height="104" fill="none"/>
+                                        <path  id="iconPath" d="M31.88 51.04L40.84 23.28H56.2L35.8 79.92H22.68L2.28 23.28H17.64L26.52 50.96L29.08 64.4H29.32L31.88 51.04ZM82.46 36.8V45.6H105.42V58H82.46V66.48H107.42V80H67.98V23.36H107.42V36.8H82.46ZM123.011 80V23.36H137.411V65.84H160.451V80H123.011Z" fill="white"/>
+                                    </svg>
+                                </li>
+                                <li class="screen__title-line-middle-opm animate__animated animate__fadeInRight">
+                                    <svg width="181" height="104" viewBox="0 0 181 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1366_4517)">
+                                        <rect width="181" height="104" fill="none"/>
+                                        <path d="M3.12 61.36V42C3.12 28.96 14.8 22.56 26.56 22.56C38.32 22.56 50.08 29.04 50.08 42V61.36C50.08 74.32 38.4 80.8 26.64 80.8C14.88 80.8 3.12 74.32 3.12 61.36ZM17.44 42V61.36C17.44 65.52 22.08 67.52 26.64 67.52C31.2 67.52 35.76 65.44 35.76 61.36V42C35.76 37.6 31.04 35.6 26.4 35.6C21.92 35.6 17.44 37.84 17.44 42ZM65.6831 80V23.36H88.3231C102.163 23.36 109.043 33.36 109.043 43.36C109.043 53.44 102.083 63.44 88.4031 63.44H80.0031V80H65.6831ZM80.0031 50.72H88.3231C96.9631 50.8 96.9631 36.64 88.3231 36.72H80.0031V50.72ZM123.136 80V23.36H137.456L149.376 51.04L161.376 23.36H175.696V80H161.296L161.376 63.68L162.256 52.24L161.776 52.16L154.336 71.6H144.496L136.896 52.16L136.496 52.24L137.456 63.68V80H123.136Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1366_4517">
+                                        <rect width="181" height="104" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </li>
+                                <li class="screen__title-line-middle-e animate__animated animate__fadeIn">
+                                    <svg width="48" height="104" viewBox="0 0 48 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1366_4517)">
+                                        <rect width="48" height="104" fill="none"/>
+                                        <path d="M18.96 36.8V45.6H41.92V58H18.96V66.48H43.92V80H4.48V23.36H43.92V36.8H18.96Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1366_4517">
+                                        <rect width="48" height="104" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </li>
+                                <li class="screen__title-line-middle-n animate__animated animate__fadeInUp">
+                                    <svg width="54" height="104" viewBox="0 0 54 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1366_4517)">
+                                        <rect width="54" height="104" fill="none"/>
+                                        <path d="M4.48 80V23.36H18.08L31.76 47.52L36.56 58.88L36.96 58.8C36.88 58.8 35.44 49.04 35.36 49.04V23.36H49.6V80H35.12L22.32 57.68L17.36 46.32L16.96 46.4L18.8 57.36V80H4.48Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1366_4517">
+                                        <rect width="54" height="104" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </li>
+                                <li class="screen__title-line-middle-t animate__animated animate__fadeIn">
+                                    <svg width="47" height="104" viewBox="0 0 47 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1366_4517)">
+                                        <rect width="47" height="104" fill="none"/>
+                                        <path d="M45.68 36.88H30.64V80H16.16V36.88H1.12V23.28H45.68V36.88Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1366_4517">
+                                        <rect width="47" height="104" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </li>
+                            </ul>
+                            <div class="screen__title-line screen__title-line--last animate__animated animate__fadeInDown">
+                                <svg width="421" height="104" viewBox="0 0 421 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1366_4517)">
+                                    <rect width="421" height="104" fill="none"/>
+                                    <path d="M33.36 62.32L45.84 68.08C41.12 77.28 32.56 80.8 25.44 80.8C14.32 80.8 3.12 74.32 3.12 61.44V41.92C3.12 29.12 14.32 22.56 25.68 22.56C32.64 22.56 41.04 25.52 45.6 35.6L33.92 40.32C30.08 33.28 17.44 34.88 17.44 41.92V61.44C17.44 68.24 30.24 70.16 33.36 62.32ZM57.6825 61.36V42C57.6825 28.96 69.3625 22.56 81.1225 22.56C92.8825 22.56 104.643 29.04 104.643 42V61.36C104.643 74.32 92.9625 80.8 81.2025 80.8C69.4425 80.8 57.6825 74.32 57.6825 61.36ZM72.0025 42V61.36C72.0025 65.52 76.6425 67.52 81.2025 67.52C85.7625 67.52 90.3225 65.44 90.3225 61.36V42C90.3225 37.6 85.6025 35.6 80.9625 35.6C76.4825 35.6 72.0025 37.84 72.0025 42ZM120.246 80V23.36H134.566L146.486 51.04L158.486 23.36H172.806V80H158.406L158.486 63.68L159.366 52.24L158.886 52.16L151.446 71.6H141.606L134.006 52.16L133.606 52.24L134.566 63.68V80H120.246ZM189.73 80V23.36H212.37C226.21 23.36 233.09 33.36 233.09 43.36C233.09 53.44 226.13 63.44 212.45 63.44H204.05V80H189.73ZM204.05 50.72H212.37C221.01 50.8 221.01 36.64 212.37 36.72H204.05V50.72ZM270.179 23.36L290.419 80H275.059L271.379 68.64H256.259L252.739 80H237.379L257.139 23.36H270.179ZM259.459 55.92H267.939L264.019 39.36H263.619L259.459 55.92ZM302.214 80V23.36H315.814L329.494 47.52L334.294 58.88L334.694 58.8C334.614 58.8 333.174 49.04 333.094 49.04V23.36H347.334V80H332.854L320.054 57.68L315.094 46.32L314.694 46.4L316.534 57.36V80H302.214ZM393.157 80H378.837V57.68L359.077 23.36H375.717L385.957 44.16L396.197 23.36H412.997L393.157 57.68V80Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1366_4517">
+                                    <rect width="421" height="104" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div> <!--last line of title-->
+                        </div>
                     </div>
                     <div class="screen__wrapper-footer">
-                        <div class="screen__wrapper-footer-block" data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <h4 class="screen__wrapper-footer-title">
-                                WEB PRODUCT
+                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--left" >
+                            <h4 class="screen__wrapper-footer-title" >
+                                <span
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                >WEB</span>
+                                <span
+                                data-aos="fade-down"
+                                data-aos-duration="1500"
+                                >PRODUCT</span>
                             </h4>
                             <h4 class="screen__wrapper-footer-title">
-                                MARRIX POWER
+                                <span
+                                    data-aos="fade-down"
+                                    data-aos-duration="2000"
+                                >
+                                    MARRIX POWER
+                                </span>
+
                             </h4>
                         </div>
                         <div class="screen__wrapper-footer-block screen__wrapper-footer-block--right">
@@ -121,27 +268,24 @@
                 </div>
             </div> <!--container-->
         </section> <!--screen screen--black-->
-
-        <!-- <section class="screen screen--second">
-            <div class="container">
-                <div class="screen__wrapper">
-                    sdfsdfsdfs
+        <section class="screen screen--black screen--innovate screen-item" id="section_two">
+            <div class="screen__box-shadow"></div>
+            <button class="screen__skip-btn">
+                <div class="screen__skip-btn__wrapper">
+                    <span>skip</span>
+                    <span>skip</span>
                 </div>
-            </div>
-        </section> -->
-        <section class="screen screen--white">
+            </button>
             <div class="container">
                 <div class="screen__wrapper">
                     <div class="screen__wrapper-head">
                         <div class="logo logo--head" data-aos="fade-down"
                         data-aos-easing="linear"
                         data-aos-duration="800">
-                            <a class="logo__icon-white" href="/">
+                            <a href="/">
                                 <img src="assets/image/marrix power.svg" alt="logo">
                             </a>
-                            <a class="logo__icon-black" href="/">
-                                <img src="assets/image/marrix power-black.svg" alt="logo">
-                            </a>
+
                         </div>
                         <div class="menu">
                             <div class="menu__content">
@@ -157,8 +301,8 @@
                                         <span class="burger__line-inner"></span>
                                     </div>
                                     <div class="burger__line burger__line--second">
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
+                                        <span class="burger__line-inner "></span>
+                                        <span class="burger__line-inner "></span>
                                     </div>
                                     <div class="burger__line burger__line--third">
                                         <span class="burger__line-inner"></span>
@@ -198,605 +342,104 @@
 
                     </div> <!--screen__wrapper-head-->
                     <div class="screen__wrapper-body">
-                        <div class="block-name">
-                            <div class="block-name__line"></div>
-                            <span class="block-name__title">our Services</span>
+                        <div class="screen__title">
+                            <svg width="964" height="146" viewBox="0 0 964 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.76837e-07 143V2.99999H32V143H4.76837e-07ZM140.055 79V2.99999H172.055V143H148.055L94.0547 67V143H62.0547V2.99999H86.0547L140.055 79ZM280.039 79V2.99999H312.039V143H288.039L234.039 67V143H202.039V2.99999H226.039L280.039 79ZM460.423 124.8C446.29 138.8 429.09 145.8 408.823 145.8C388.557 145.8 371.357 138.8 357.223 124.8C343.09 110.8 336.023 93.5333 336.023 73C336.023 52.4667 343.09 35.2 357.223 21.2C371.357 7.19999 388.557 0.199991 408.823 0.199991C429.09 0.199991 446.29 7.19999 460.423 21.2C474.557 35.2 481.623 52.4667 481.623 73C481.623 93.5333 474.557 110.8 460.423 124.8ZM368.023 73C368.023 85.2667 371.89 95.2667 379.623 103C387.357 110.733 397.09 114.6 408.823 114.6C420.423 114.6 430.09 110.733 437.823 103C445.69 95.1333 449.623 85.1333 449.623 73C449.623 60.8667 445.69 50.8667 437.823 43C430.09 35.2667 420.423 31.4 408.823 31.4C397.09 31.4 387.357 35.2667 379.623 43C371.89 50.7333 368.023 60.7333 368.023 73ZM573.986 143H533.186L487.586 2.99999H522.586L553.586 106L584.586 2.99999H619.586L573.986 143ZM753.609 143H718.609L711.609 121H659.609L652.609 143H617.609L665.209 2.99999H706.009L753.609 143ZM685.609 39.6L669.209 91H702.009L685.609 39.6ZM751.586 2.99999H855.586V33.8H819.586V143H787.586V33.8H751.586V2.99999ZM907.594 87.4V112.2H963.594V143H875.594V2.99999H962.594V33.8H907.594V57H957.594V87.4H907.594Z" fill="url(#paint0_linear_812_6075)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_812_6075" x1="941.158" y1="117.49" x2="88.625" y2="-376.459" gradientUnits="userSpaceOnUse">
+                                <stop offset="0.0364583" stop-color="#00E0FF"/>
+                                <stop offset="1" stop-color="#0075FF"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
                         </div>
-                        <div class="block-content">
-                            <div class="swiper-slider swiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide " style="background: url(assets/image/Vector.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                    <div class="slide__non-active">
-                                        <h3 class="slider__title">Web-development</h3>
-                                        <h3 class="slider__title">Web-development</h3>
-                                    </div>
-                                    <div class="slide-active">
-                                      <h3 class="slider__title">Web-development</h3>
-                                      <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
-                                    </div>
-                                  </div>
-                                  <div class="swiper-slide " style="background: url(assets/image/Vector2.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                    <div class="slide__non-active">
-                                        <h3 class="slider__title">UX/UI Design</h3>
-                                        <h3 class="slider__title">UX/UI Design</h3>
-                                    </div>
-                                    <div class="slide-active">
-                                      <h3 class="slider__title">UX/UI Design</h3>
-                                      <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
-                                    </div>
-                                  </div>
-                                  <div class="swiper-slide " style="background: url(assets/image/Vector3.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                    <div class="slide__non-active">
-                                        <h3 class="slider__title">Mobile development</h3>
-                                        <h3 class="slider__title">Mobile development</h3>
-                                    </div>
-                                    <div class="slide-active">
-                                      <h3 class="slider__title">Web-development</h3>
-                                      <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
-                                    </div>
-                                  </div>
-                                  <div class="swiper-slide " style="background: url(assets/image/Vector.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                    <div class="slide__non-active">
-                                        <h3 class="slider__title">Game development</h3>
-                                        <h3 class="slider__title">Game development</h3>
-                                    </div>
-                                    <div class="slide-active">
-                                      <h3 class="slider__title">Game development</h3>
-                                      <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
-                                    </div>
-                                  </div>
-                                  <div class="swiper-slide " style="background: url(assets/image/Vector.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                                    <div class="slide__non-active">
-                                        <h3 class="slider__title">Web-development</h3>
-                                        <h3 class="slider__title">Web-development</h3>
-                                    </div>
-                                    <div class="slide-active">
-                                      <h3 class="slider__title">Web-development</h3>
-                                      <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
-                                    </div>
-                                  </div>
-
-                                </div>
-                                <!-- Add Pagination -->
-                                <div class="slider__nav">
-                                    <button class="slider__prev-arr">
-                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.12155 7.49999H19.0002V10.5H6.12155L11.0609 15.4393L8.93957 17.5606L0.378906 8.99999L8.93957 0.439331L11.0609 2.56065L6.12155 7.49999Z" fill="#121212"/>
-                                        </svg>
-                                    </button>
-                                    <div class="swiper-pagination"></div>
-                                    <button class="slider__next-arr">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4775 13.557H2.92383V10.443H15.4775L10.6628 5.31595L12.7306 3.11401L21.0752 12L12.7306 20.886L10.6628 18.6841L15.4775 13.557Z" fill="#121212"/>
-                                        </svg>
-                                    </button>
-                                </div>
-
-                              </div>
-                        </div>
-                    </div>
-                    <div class="screen__wrapper-footer">
-                        <div class="screen__wrapper-footer-block" data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <h4 class="screen__wrapper-footer-title">
-                                WEB PRODUCT
-                            </h4>
-                            <h4 class="screen__wrapper-footer-title">
-                                MARRIX POWER
-                            </h4>
-                        </div>
-                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--right">
-                            <a class="btn__3um8i lines__1b6pW btn__1Q_3Z" href="">Get a Free Quote
-                                <span class="left__1U2py"></span>
-                                <span class="bdLeft__7nQdg"></span>
-                                <span class="right__3KA-B"></span>
-                                <span class="bdRight__D3f2t"></span>
-                                <span class="top__V1mjb"></span>
-                                <span class="bottom__22hfT"></span>
-                            </a>
-                            <div class="portfolio__item">
-                                <div class="portfolio__item-embet">
-                                    <a class="portfolio__item-link" href="/">
-                                        Portfolio
-                                    </a>
-                                    <a class="portfolio__item-link" href="/">
-                                        Portfolio
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--container-->
-        </section> <!--services-->
-        <section class="screen screen--white">
-            <div class="container">
-                <div class="screen__wrapper">
-                    <div class="screen__wrapper-head">
-                        <div class="logo logo--head" data-aos="fade-down"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <a class="logo__icon-white" href="/">
-                                <img src="assets/image/marrix power.svg" alt="logo">
-                            </a>
-                            <a class="logo__icon-black" href="/">
-                                <img src="assets/image/marrix power-black.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <div class="menu__content">
-                                <div class="menu__block-btn">
-                                    <div class="menu__block-btn-embet">
-                                        <button class="menu__btn" type="button">MENU</button>
-                                        <button class="menu__btn" type="button">MENU</button>
-                                    </div>
-                                </div>
-                                <button class="burger">
-                                    <div class="burger__line burger__line--firth">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
-                                    </div>
-                                    <div class="burger__line burger__line--second">
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                    </div>
-                                    <div class="burger__line burger__line--third">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
-                                    </div>
-                                </button>
-
-                            </div>
-                            <ul class="lang">
-
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            UA
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > UA</a>
-                                    </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            RU
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > RU</a>
-                                    </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            EN
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > EN</a>
-                                    </div>
-                                </li>
-                            </ul> <!--lang-->
-                        </div> <!--menu-->
-
-                    </div> <!--screen__wrapper-head-->
-                    <div class="screen__wrapper-body">
-                        <div class="block-name">
-                            <div class="block-name__line"></div>
-                            <span class="block-name__title">our technologies</span>
-                        </div>
-                        <div class="block__content block__content--flex" >
-                            <div class="block__content-titles" >
-                                <h4 class="block__content-title" data-aos="fade-up"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500">Code the Extraordinary, Achieve the</h4>
-                                <h4 class="block__content-subtitle" data-aos="fade-down"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500">Impossible</h4>
-                            </div>
-                            <div class="owl-carousel" style="max-width: 1147px;" >
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/html.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/js.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/react.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/react_n.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/redux.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/swift.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/java.png" alt="">
-                                </div>
-                                <div class="tech-block__list-item">
-                                    <img src="assets/image/tech/kotlin.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-carousel" >
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/pyton.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/node.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/php.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/css.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/goland.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/c.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/unity.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/unreal.png" alt="">
-                            </div>
-                            <div class="tech-block__list-item">
-                                <img src="assets/image/tech2/laravel.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="screen__wrapper-footer">
-                        <div class="screen__wrapper-footer-block" data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <h4 class="screen__wrapper-footer-title">
-                                WEB PRODUCT
-                            </h4>
-                            <h4 class="screen__wrapper-footer-title">
-                                MARRIX POWER
-                            </h4>
-                        </div>
-                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--right">
-                            <a class="btn__3um8i lines__1b6pW btn__1Q_3Z" href="">Get a Free Quote
-                                <span class="left__1U2py"></span>
-                                <span class="bdLeft__7nQdg"></span>
-                                <span class="right__3KA-B"></span>
-                                <span class="bdRight__D3f2t"></span>
-                                <span class="top__V1mjb"></span>
-                                <span class="bottom__22hfT"></span>
-                            </a>
-                            <div class="portfolio__item">
-                                <div class="portfolio__item-embet">
-                                    <a class="portfolio__item-link" href="/">
-                                        Portfolio
-                                    </a>
-                                    <a class="portfolio__item-link" href="/">
-                                        Portfolio
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--container-->
-        </section> <!--technologies-->
-        <section class="screen screen--black screen--advantages">
-            <div class="container">
-                <div class="screen__wrapper">
-                    <div class="screen__wrapper-head">
-                        <div class="logo logo--head" data-aos="fade-down"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <a class="logo__icon-white" href="/">
-                                <img src="assets/image/marrix power.svg" alt="logo">
-                            </a>
-                            <a class="logo__icon-black" href="/">
-                                <img src="assets/image/marrix power-black.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <div class="menu__content">
-                                <div class="menu__block-btn">
-                                    <div class="menu__block-btn-embet">
-                                        <button class="menu__btn" type="button">MENU</button>
-                                        <button class="menu__btn" type="button">MENU</button>
-                                    </div>
-                                </div>
-                                <button class="burger">
-                                    <div class="burger__line burger__line--firth">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
-                                    </div>
-                                    <div class="burger__line burger__line--second">
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                    </div>
-                                    <div class="burger__line burger__line--third">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
-                                    </div>
-                                </button>
-
-                            </div>
-                            <ul class="lang">
-
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            UA
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > UA</a>
-                                    </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            RU
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > RU</a>
-                                    </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            EN
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > EN</a>
-                                    </div>
-                                </li>
-                            </ul> <!--lang-->
-                        </div> <!--menu-->
-
-                    </div> <!--screen__wrapper-head-->
-                    <div class="screen__wrapper-body">
-                        <div class="block-name">
-                            <div class="block-name__line"></div>
-                            <span class="block-name__title">Why chooses us</span>
-                        </div>
-                        <div class="block-content">
-                            <div class="grid advantages">
-                                <div class="item advantages__item">
-                                    <div class="advantages__item-number" data-aos="fade-right"
-                                    data-aos-offset="700"
-                                    data-aos-easing="ease-in-sine">
-                                        01
-                                    </div>
-                                    <div class="advantages__item-content">
-                                        <h4 class="advantages__item-title">
-                                            Our pricing is fair and competitive
-                                        </h4>
-                                        <div class="advantages__item-text">
-                                            At the heart of our approach is our tight-knit, highly skilled team. We believe in working smart, not just hard, to minimize project hours. We get it – creating new digital wonders can be pricey. That's why we're here, not just as experts but as partners, ready to help you explore budget-friendly alternatives or find existing solutions that fit like a glove.
+                        <div class="screen__innovate-content">
+                            <div class="screen__innovate-content-left">
+                                <div class="innovate-content__item">
+                                    <div class="innovate-content__item-wrapper " data-aos="fade-right"
+                                    data-aos-duration="1000"
+                                    >
+                                        <div class="innovate-content__item-img">
+                                            <img src="assets/image/innovate/10+.svg " alt="">
+                                        </div>
+                                        <div class="innovate-content__item-text">
+                                            years of proven commercial experience
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item advantages__item">
-                                    <div class="advantages__item-number" data-aos="fade-right"
-                                    data-aos-offset="800"
-                                    data-aos-easing="ease-in-sine">
-                                        02
-                                    </div>
-                                    <div class="advantages__item-content">
-                                        <h4 class="advantages__item-title">
-                                            A Symphony of Transparency and Partnership
-                                        </h4>
-                                        <div class="advantages__item-text">
-                                            Be updated and dive deep into the development process. Meet the specialists that work on your projects and track their progress, as well as, be confident in your project's future. Long lasting partnership is our core value. We are never a vendor, but a tech partner.
+                                <div class="innovate-content__item">
+                                    <div class="innovate-content__item-wrapper "
+                                    data-aos="fade-left"
+                                    data-aos-duration="1000"
+                                    >
+                                        <div class="innovate-content__item-img">
+                                            <img src="assets/image/innovate/200+.svg " alt="">
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="item advantages__item">
-                                    <div class="advantages__item-number" data-aos="fade-right"
-                                    data-aos-offset="1000"
-                                    data-aos-easing="ease-in-sine">
-                                        03
-                                    </div>
-                                    <div class="advantages__item-content">
-                                        <h4 class="advantages__item-title">
-                                            Partnering for Success
-                                        </h4>
-                                        <div class="advantages__item-text">
-                                            We're not just about coding; we're your partners in making your business thrive. Let's talk, refine your ideas, and make everything just right. You do your thing, and we'll sprinkle some magic with our design and development skills. Cool? 😎
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item advantages__item">
-                                    <div class="advantages__item-number" data-aos="fade-right"
-                                    data-aos-offset="1100"
-                                    data-aos-easing="ease-in-sine">
-                                        04
-                                    </div>
-                                    <div class="advantages__item-content">
-                                        <h4 class="advantages__item-title">
-                                            Reliable Warmth
-                                        </h4>
-                                        <div class="advantages__item-text">
-                                             Fueled by passion, we're dedicated to your success. Let us handle the intricacies of software development and design, so you can focus on your business and sales. Your journey is ours, and we deliver world-class quality with a personal touch.
+                                        <div class="innovate-content__item-text">
+                                            projects outsourced and distributed
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="screen__wrapper-footer">
-                        <div class="screen__wrapper-footer-block" data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <h4 class="screen__wrapper-footer-title">
-                                WEB PRODUCT
-                            </h4>
-                            <h4 class="screen__wrapper-footer-title">
-                                MARRIX POWER
-                            </h4>
-                        </div>
-                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--right">
-                            <a class="btn__3um8i lines__1b6pW btn__1Q_3Z" href="">Get a Free Quote
-                                <span class="left__1U2py"></span>
-                                <span class="bdLeft__7nQdg"></span>
-                                <span class="right__3KA-B"></span>
-                                <span class="bdRight__D3f2t"></span>
-                                <span class="top__V1mjb"></span>
-                                <span class="bottom__22hfT"></span>
-                            </a>
-                            <div class="portfolio__item">
-                                <div class="portfolio__item-embet">
-                                    <a class="portfolio__item-link" href="/">
-                                        Portfolio
-                                    </a>
-                                    <a class="portfolio__item-link" href="/">
-                                        Portfolio
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--container-->
-        </section> <!--services-->
-        <section class="screen screen--white">
-            <div class="container">
-                <div class="screen__wrapper">
-                    <div class="screen__wrapper-head">
-                        <div class="logo logo--head" data-aos="fade-down"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <a class="logo__icon-white" href="/">
-                                <img src="assets/image/marrix power.svg" alt="logo">
-                            </a>
-                            <a class="logo__icon-black" href="/">
-                                <img src="assets/image/marrix power-black.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <div class="menu__content">
-                                <div class="menu__block-btn">
-                                    <div class="menu__block-btn-embet">
-                                        <button class="menu__btn" type="button">MENU</button>
-                                        <button class="menu__btn" type="button">MENU</button>
-                                    </div>
-                                </div>
-                                <button class="burger">
-                                    <div class="burger__line burger__line--firth">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
-                                    </div>
-                                    <div class="burger__line burger__line--second">
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                    </div>
-                                    <div class="burger__line burger__line--third">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
-                                    </div>
-                                </button>
-
-                            </div>
-                            <ul class="lang">
-
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            UA
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > UA</a>
-                                    </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            RU
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > RU</a>
-                                    </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            EN
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > EN</a>
-                                    </div>
-                                </li>
-                            </ul> <!--lang-->
-                        </div> <!--menu-->
-
-                    </div> <!--screen__wrapper-head-->
-                    <div class="screen__wrapper-body">
-                        <div class="block-name">
-                            <div class="block-name__line"></div>
-                            <span class="block-name__title">OUR happy clients</span>
-                        </div>
-                        <div class="block__content block__content--our-client" >
-                            <div class="block__content-head">
-                                <h4 class="block__content-title block__content-title--our-client"
-                                    data-aos="fade-right"
-                                    data-aos-offset="600"
-                                    data-aos-easing="ease-in-sine"
+                            <div class="screen__innovate-content-center">
+                                <div class="innovate-content__item-wrapper" data-aos="fade-up"
+                                data-aos-duration="1000"
                                 >
-                                    Innovative Software Solutions: Where Ideas Transform into
-                                </h4>
-                                <span class="block__content-subtitle block__content-subtitle--our-clients"
-                                data-aos="fade-left"
-                                data-aos-offset="600"
-                                data-aos-easing="ease-in-sine"
-                                >Reality</span>
+                                    <div class="innovate-content__item-text">
+                                        <span>Where Ideas</span>
+                                        <span>Transform into Reality</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="block__content-body our-clients"  data-aos="fade-up"
-                            data-aos-duration="2000">
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/logo-hinderer-and-wolff-white 3.png" alt="">
+                            <div class="screen__innovate-content-right">
+                                <div class="innovate-content__item">
+                                    <div class="innovate-content__item-wrapper" data-aos="fade-right"
+                                    data-aos-duration="1000"
+                                    >
+                                        <div class="innovate-content__item-img">
+                                            <img src="assets/image/innovate/100+.svg " alt="">
+                                        </div>
+                                        <div class="innovate-content__item-text">
+                                            years of proven commercial experience
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/outdoorsy.png" alt="">
+                                <div class="innovate-content__item">
+                                    <div class="innovate-content__item-wrapper"
+                                    data-aos="fade-left"
+                                    data-aos-duration="1000"
+                                    >
+                                        <div class="innovate-content__item-img">
+                                            <img src="assets/image/innovate/50+.svg " alt="">
+                                        </div>
+                                        <div class="innovate-content__item-text">
+                                            years of proven commercial experience
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/circuit.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/webaroo.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/w.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/ski.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/u.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/icon_m.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/kulan.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/you.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/icon_5.png" alt="">
-                                </div>
-                                <div class="our-clients__item">
-                                    <img src="assets/image/clients/you_f.png" alt="">
-                                </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="screen__wrapper-footer">
-                        <div class="screen__wrapper-footer-block" data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <h4 class="screen__wrapper-footer-title">
-                                WEB PRODUCT
+                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--left" >
+                            <h4 class="screen__wrapper-footer-title" >
+                                <span
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                >WEB</span>
+                                <span
+                                data-aos="fade-down"
+                                data-aos-duration="1500"
+                                >PRODUCT</span>
                             </h4>
                             <h4 class="screen__wrapper-footer-title">
-                                MARRIX POWER
+                                <span
+                                    data-aos="fade-down"
+                                    data-aos-duration="2000"
+                                >
+                                    MARRIX POWER
+                                </span>
+
                             </h4>
                         </div>
                         <div class="screen__wrapper-footer-block screen__wrapper-footer-block--right">
@@ -822,149 +465,491 @@
                     </div>
                 </div>
             </div> <!--container-->
-        </section> <!--contacts-->
-        <section class="screen screen--black screen--advantages">
-            <div class="container">
-                <div class="screen__wrapper screen__wrapper-content--contacts">
-                    <div class="screen__wrapper-head">
+        </section> <!--screen screen--black-->
+        <div class="page" id="page_block screen-item " >
+            <!-- <section class="screen screen--second">
+                <div class="container">
+                    <div class="screen__wrapper">
+                        sdfsdfsdfs
+                    </div>
+                </div>
+            </section> -->
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrapper">
                         <div class="logo logo--head" data-aos="fade-down"
-                        data-aos-easing="linear"
-                        data-aos-duration="800">
-                            <a class="logo__icon-white" href="/">
-                                <img src="assets/image/marrix power.svg" alt="logo">
-                            </a>
-                            <a class="logo__icon-black" href="/">
-                                <img src="assets/image/marrix power-black.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <div class="menu__content">
-                                <div class="menu__block-btn">
-                                    <div class="menu__block-btn-embet">
-                                        <button class="menu__btn" type="button">MENU</button>
-                                        <button class="menu__btn" type="button">MENU</button>
+                            data-aos-easing="linear"
+                            data-aos-duration="800">
+                                <a class="logo__icon-link" href="/">
+                                    <svg width="347" height="32" viewBox="0 0 347 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.44V-4.76837e-07L16.04 16L32.04 -4.76837e-07V32H26.76V12.88L16.04 23.56L0 7.44ZM53.8441 21.36L51.2041 26.64L48.4841 32H42.5641L58.5641 -4.76837e-07L69.2441 21.36H63.2441L58.5641 11.96L53.8441 21.36ZM71.8841 26.68L74.5641 32H68.6041L65.9641 26.68H71.8841ZM84.5531 16.68C83.3131 18.48 81.7531 19.76 79.8731 20.52L86.4331 32H80.3131L71.0331 15.96L75.7931 16C77.2331 16 78.4731 15.48 79.5131 14.44C80.5931 13.4 81.1131 12.12 81.1131 10.64C81.1131 9.2 80.5931 7.96 79.5131 6.92C78.4731 5.88 77.2331 5.36 75.7931 5.36H65.1131L64.5131 4.76L61.7531 -4.76837e-07H75.7931C78.7131 -4.76837e-07 81.2331 1.04 83.3131 3.12C85.3931 5.24 86.4331 7.72 86.4331 10.64C86.4331 12.88 85.8331 14.88 84.5531 16.68ZM109.297 16.68C108.057 18.48 106.497 19.76 104.617 20.52L111.177 32H105.057L95.7769 15.96L100.537 16C101.977 16 103.217 15.48 104.257 14.44C105.337 13.4 105.857 12.12 105.857 10.64C105.857 9.2 105.337 7.96 104.257 6.92C103.217 5.88 101.977 5.36 100.537 5.36H89.8569L89.2569 4.76L86.4969 -4.76837e-07H100.537C103.457 -4.76837e-07 105.977 1.04 108.057 3.12C110.137 5.24 111.177 7.72 111.177 10.64C111.177 12.88 110.577 14.88 109.297 16.68ZM124.647 5.28V26.64L119.327 32V-4.76837e-07L124.647 5.28ZM134.153 -4.76837e-07L143.233 11.68L139.873 16L127.312 -4.76837e-07H134.153ZM127.312 32L139.873 16L143.233 20.32L134.153 32H127.312ZM159.113 -4.76837e-07L146.633 16L143.233 11.68L152.353 -4.76837e-07H159.113ZM143.233 20.32L146.633 16L159.113 32H152.353L143.233 20.32ZM202.39 3.12C204.47 5.24 205.51 7.76 205.51 10.68C205.51 13.6 204.51 16.16 202.39 18.24C200.31 20.32 197.79 21.36 194.87 21.36H184.19V32H178.87V16H184.19H194.87C196.31 16 197.55 15.48 198.59 14.44C199.63 13.4 200.19 12.16 200.19 10.68C200.19 9.24 199.67 7.96 198.59 6.92C197.55 5.88 196.31 5.36 194.87 5.36H184.19L178.87 -4.76837e-07H194.87C197.79 -4.76837e-07 200.31 1.04 202.39 3.12ZM228.481 -4.76837e-07C232.921 -4.76837e-07 236.641 1.6 239.761 4.72C242.921 7.84 244.521 11.6 244.521 16C244.521 20.44 242.921 24.2 239.761 27.28C236.641 30.4 232.921 32 228.481 32C224.041 32 220.321 30.4 217.201 27.28C214.081 24.16 212.481 20.44 212.481 16C212.481 11.6 214.081 7.84 217.201 4.72C220.281 1.6 224.041 -4.76837e-07 228.481 -4.76837e-07ZM228.481 5.36C225.561 5.36 223.041 6.36 220.921 8.48C218.841 10.56 217.841 13.08 217.841 16C217.841 18.92 218.841 21.48 220.921 23.56C223.001 25.64 225.561 26.64 228.481 26.64C231.401 26.64 233.921 25.64 236.001 23.56C238.121 21.44 239.121 18.92 239.121 16C239.121 13.08 238.081 10.56 236.001 8.48C233.921 6.4 231.401 5.36 228.481 5.36ZM249.318 -4.76837e-07L259.398 20.04L256.398 26.04L243.358 -4.76837e-07H249.318ZM289.518 -4.76837e-07H295.478L279.478 32L269.398 11.96L272.398 5.96L279.478 20.04L289.518 -4.76837e-07ZM298.18 31.56L303.5 26.64H319.5V32H298.18V31.56ZM298.18 -4.76837e-07H319.5V5.36H303.5L298.18 -4.76837e-07ZM298.18 13.36H303.5H319.5V18.68H303.5H298.18V13.36ZM344.161 16.68C342.921 18.48 341.361 19.76 339.481 20.52L346.041 32H339.921L330.641 15.96L335.401 16C336.841 16 338.081 15.48 339.121 14.44C340.201 13.4 340.721 12.12 340.721 10.64C340.721 9.2 340.201 7.96 339.121 6.92C338.081 5.88 336.841 5.36 335.401 5.36H324.721L324.121 4.76L321.361 -4.76837e-07H335.401C338.321 -4.76837e-07 340.841 1.04 342.921 3.12C345.001 5.24 346.041 7.72 346.041 10.64C346.041 12.88 345.441 14.88 344.161 16.68Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="menu">
+                                <div class="menu__content">
+                                    <div class="menu__block-btn">
+                                        <div class="menu__block-btn-embet">
+                                            <button class="menu__btn" type="button">MENU</button>
+                                            <button class="menu__btn" type="button">MENU</button>
+                                        </div>
+                                    </div>
+                                    <button class="burger">
+                                        <div class="burger__line burger__line--firth">
+                                            <span class="burger__line-inner"></span>
+                                            <span class="burger__line-inner"></span>
+                                        </div>
+                                        <div class="burger__line burger__line--second">
+                                            <span class="burger__line-inner "></span>
+                                            <span class="burger__line-inner "></span>
+                                        </div>
+                                        <div class="burger__line burger__line--third">
+                                            <span class="burger__line-inner burger__line-inner--short"></span>
+                                            <span class="burger__line-inner burger__line-inner--short"></span>
+                                        </div>
+                                    </button>
+
+                                </div>
+                                <ul class="lang">
+
+                                    <li class="lang__item">
+                                        <div class="lang__item-embet">
+                                            <a class="lang__item-link" href="/">
+                                                UA
+                                            </a>
+                                            <a class="lang__item-link lang__item-link--second" href="/" > UA</a>
+                                        </div>
+                                    </li>
+                                    <li class="lang__item">
+                                        <div class="lang__item-embet">
+                                            <a class="lang__item-link" href="/">
+                                                RU
+                                            </a>
+                                            <a class="lang__item-link lang__item-link--second" href="/" > RU</a>
+                                        </div>
+                                    </li>
+                                    <li class="lang__item">
+                                        <div class="lang__item-embet">
+                                            <a class="lang__item-link" href="/">
+                                                EN
+                                            </a>
+                                            <a class="lang__item-link lang__item-link--second" href="/" > EN</a>
+                                        </div>
+                                    </li>
+                                </ul> <!--lang-->
+                            </div> <!--menu-->
+                    </div>
+                </div>
+            </header> <!--header-->
+            <main class="main">
+                <section class="screen screen--white screen--our-services" data-class="black">
+                    <div class="container">
+                        <div class="screen__wrapper">
+                            <div class="screen__wrapper-body">
+                                <div class="block-name">
+                                    <div class="block-name__line"></div>
+                                    <span class="block-name__title">our Services</span>
+                                </div>
+                                <div class="block-content">
+                                    <div class="swiper-slider swiper">
+                                        <div class="swiper-wrapper">
+                                        <div class="swiper-slide " style="background: url(assets/image/Vector.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                            <div class="slide__non-active">
+                                                <h3 class="slider__title">Web-development</h3>
+                                                <h3 class="slider__title">Web-development</h3>
+                                            </div>
+                                            <div class="slide-active">
+                                            <h3 class="slider__title">Web-development</h3>
+                                            <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide " style="background: url(assets/image/Vector2.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                            <div class="slide__non-active">
+                                                <h3 class="slider__title">UX/UI Design</h3>
+                                                <h3 class="slider__title">UX/UI Design</h3>
+                                            </div>
+                                            <div class="slide-active">
+                                            <h3 class="slider__title">UX/UI Design</h3>
+                                            <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide " style="background: url(assets/image/Vector3.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                            <div class="slide__non-active">
+                                                <h3 class="slider__title">Mobile development</h3>
+                                                <h3 class="slider__title">Mobile development</h3>
+                                            </div>
+                                            <div class="slide-active">
+                                            <h3 class="slider__title">Web-development</h3>
+                                            <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide " style="background: url(assets/image/Vector.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                            <div class="slide__non-active">
+                                                <h3 class="slider__title">Game development</h3>
+                                                <h3 class="slider__title">Game development</h3>
+                                            </div>
+                                            <div class="slide-active">
+                                            <h3 class="slider__title">Game development</h3>
+                                            <div class="slider__desc">Our team delivers full stack customer software development along with a wide range of comprehensive solutions to reimagine and upgrade your digital presence. We will implement a website tha will put you at a competitive advantage while diversifying your online presence in a way that most uniquely showcases your products and services.</div>
+                                            </div>
+                                        </div>
+
+                                        </div>
+                                        <!-- Add Pagination -->
+                                        <div class="slider__nav">
+                                            <button class="slider__prev-arr">
+                                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.12155 7.49999H19.0002V10.5H6.12155L11.0609 15.4393L8.93957 17.5606L0.378906 8.99999L8.93957 0.439331L11.0609 2.56065L6.12155 7.49999Z" fill="#121212"/>
+                                                </svg>
+                                            </button>
+                                            <div class="swiper-pagination"></div>
+                                            <button class="slider__next-arr">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4775 13.557H2.92383V10.443H15.4775L10.6628 5.31595L12.7306 3.11401L21.0752 12L12.7306 20.886L10.6628 18.6841L15.4775 13.557Z" fill="#121212"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+
                                     </div>
                                 </div>
-                                <button class="burger">
-                                    <div class="burger__line burger__line--firth">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
+                            </div>
+                        </div>
+                    </div> <!--container-->
+                </section> <!--services-->
+                <section class="screen screen--white screen--our-technologies" data-class="black">
+                    <div class="container">
+                        <div class="screen__wrapper">
+                            <div class="screen__wrapper-body">
+                                <div class="block-name">
+                                    <div class="block-name__line"></div>
+                                    <span class="block-name__title">our technologies</span>
+                                </div>
+                                <div class="block__content block__content--flex" >
+                                    <div class="block__content-titles" >
+                                        <h4 class="block__content-title" data-aos="fade-up"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1500">Code the Extraordinary, Achieve the</h4>
+                                        <h4 class="block__content-subtitle" data-aos="fade-down"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1500">Impossible</h4>
                                     </div>
-                                    <div class="burger__line burger__line--second">
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
-                                        <span class="burger__line-inner burger__line-inner--short"></span>
+                                    <div class="owl-carousel" style="max-width: 1147px;" >
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/html.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/js.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/react.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/react_n.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/redux.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/swift.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/java.png" alt="">
+                                        </div>
+                                        <div class="tech-block__list-item">
+                                            <img src="assets/image/tech/kotlin.png" alt="">
+                                        </div>
                                     </div>
-                                    <div class="burger__line burger__line--third">
-                                        <span class="burger__line-inner"></span>
-                                        <span class="burger__line-inner"></span>
+                                </div>
+                                <div class="owl-carousel" >
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/pyton.png" alt="">
                                     </div>
-                                </button>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/node.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/php.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/css.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/goland.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/c.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/unity.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/unreal.png" alt="">
+                                    </div>
+                                    <div class="tech-block__list-item">
+                                        <img src="assets/image/tech2/laravel.png" alt="">
+                                    </div>
+                                </div>
 
                             </div>
-                            <ul class="lang">
+                        </div>
+                    </div> <!--container-->
+                </section> <!--technologies-->
+                <section class="screen screen--black screen--advantages" data-class="white">
+                    <div class="container">
+                        <div class="screen__wrapper">
 
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            UA
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > UA</a>
+                            <div class="screen__wrapper-body">
+                                <div class="block-name">
+                                    <div class="block-name__line"></div>
+                                    <span class="block-name__title">Why chooses us</span>
+                                </div>
+                                <div class="block-content">
+                                    <div class="grid grid--advantages">
+                                        <div class="item advantages__item">
+                                            <div class="advantages__item-number" data-aos="fade-right"
+                                            data-aos-offset="0"
+                                            data-aos-delay="0"
+                                            data-aos-easing="ease-in-sine">
+                                                01
+                                            </div>
+                                            <div class="advantages__item-content">
+                                                <h4 class="advantages__item-title">
+                                                    Our pricing is fair and competitive
+                                                </h4>
+                                                <div class="advantages__item-text">
+                                                    At the heart of our approach is our tight-knit, highly skilled team. We believe in working smart, not just hard, to minimize project hours. We get it – creating new digital wonders can be pricey. That's why we're here, not just as experts but as partners, ready to help you explore budget-friendly alternatives or find existing solutions that fit like a glove.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item advantages__item">
+                                            <div class="advantages__item-number" data-aos="fade-right"
+                                            data-aos-offset="0"
+                                            data-aos-delay="100"
+                                            data-aos-easing="ease-in-sine">
+                                                02
+                                            </div>
+                                            <div class="advantages__item-content">
+                                                <h4 class="advantages__item-title">
+                                                    A Symphony of Transparency and Partnership
+                                                </h4>
+                                                <div class="advantages__item-text">
+                                                    Be updated and dive deep into the development process. Meet the specialists that work on your projects and track their progress, as well as, be confident in your project's future. Long lasting partnership is our core value. We are never a vendor, but a tech partner.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item advantages__item">
+                                            <div class="advantages__item-number" data-aos="fade-right"
+                                            data-aos-offset="0"
+                                            data-aos-delay="200"
+                                            data-aos-easing="ease-in-sine">
+                                                03
+                                            </div>
+                                            <div class="advantages__item-content">
+                                                <h4 class="advantages__item-title">
+                                                    Partnering for Success
+                                                </h4>
+                                                <div class="advantages__item-text">
+                                                    We're not just about coding; we're your partners in making your business thrive. Let's talk, refine your ideas, and make everything just right. You do your thing, and we'll sprinkle some magic with our design and development skills. Cool? 😎
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item advantages__item">
+                                            <div class="advantages__item-number" data-aos="fade-right"
+                                            data-aos-offset="0"
+                                            data-aos-delay="300"
+                                            data-aos-easing="ease-in-sine">
+                                                04
+                                            </div>
+                                            <div class="advantages__item-content">
+                                                <h4 class="advantages__item-title">
+                                                    Reliable Warmth
+                                                </h4>
+                                                <div class="advantages__item-text">
+                                                    Fueled by passion, we're dedicated to your success. Let us handle the intricacies of software development and design, so you can focus on your business and sales. Your journey is ours, and we deliver world-class quality with a personal touch.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            RU
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > RU</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--container-->
+                </section> <!--services-->
+                <section class="screen screen--white screen--clients" data-class="black">
+                    <div class="container">
+                        <div class="screen__wrapper">
+                            <div class="screen__wrapper-body">
+                                <div class="block-name">
+                                    <div class="block-name__line"></div>
+                                    <span class="block-name__title">OUR happy clients</span>
+                                </div>
+                                <div class="block__content block__content--our-client" >
+                                    <div class="block__content-head">
+                                        <h4 class="block__content-title block__content-title--our-client"
+                                            data-aos="fade-right"
+                                            data-aos-offset="600"
+                                            data-aos-easing="ease-in-sine"
+                                        >
+                                            Innovative Software Solutions: Where Ideas Transform into
+                                        </h4>
+                                        <span class="block__content-subtitle block__content-subtitle--our-clients"
+                                        data-aos="fade-left"
+                                        data-aos-offset="600"
+                                        data-aos-easing="ease-in-sine"
+                                        >Reality</span>
                                     </div>
-                                </li>
-                                <li class="lang__item">
-                                    <div class="lang__item-embet">
-                                        <a class="lang__item-link" href="/">
-                                            EN
-                                        </a>
-                                        <a class="lang__item-link lang__item-link--second" href="/" > EN</a>
-                                    </div>
-                                </li>
-                            </ul> <!--lang-->
-                        </div> <!--menu-->
+                                    <div class="block__content-body our-clients"  data-aos="fade-up"
+                                    data-aos-duration="2000">
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/logo-hinderer-and-wolff-white 3.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/outdoorsy.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/circuit.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/webaroo.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/w.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/ski.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/u.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/icon_m.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/kulan.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/you.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/icon_5.png" alt="">
+                                        </div>
+                                        <div class="our-clients__item">
+                                            <img src="assets/image/clients/you_f.png" alt="">
+                                        </div>
 
-                    </div> <!--screen__wrapper-head-->
-                    <div class="screen__wrapper-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--container-->
+                </section> <!--contacts-->
+                <section class="screen screen--black screen--information" data-class="white">
+                    <div class="screen__box-shadow"></div>
+                    <div class="embet">
                         <div class="block-name">
                             <div class="block-name__line"></div>
                             <span class="block-name__title">LET’S GET DOWN TO BUSINESS</span>
                         </div>
-                        <div class="block-content block-content--contacts">
-                            <h4 class="block-content--title" data-aos="fade-up"
-                            data-aos-duration="2000">
-                                We want to hear you
-                            </h4>
+                        <div class="screen__wrapper screen__wrapper-content--contacts">
+                            <div class="screen__wrapper-body">
 
-                            <div class="block-content-info">
-                                <div class="block-content-info__left">
-                                    <h5 class="block-content-info__title">Educational Course from Founder of Marrix Power</h5>
-                                    <div class="block-content-info__contacts">
-                                        <div class="block-content-info__contact block-content-info__contact-email">
-                                            <a href="mailto:inquiries@marrix-power.tech">inquiries@marrix-power.tech</a>
-                                        </div>
-                                        <div class="block-content-info__contact block-content-info__contact-tel">
-                                            <a href="tel:+380630000000">+38 (063) 000 00 00</a>
-                                        </div>
-                                        <ul class="block-content-info__contact block-content-info__contact-social">
-                                            <li>
-                                                <a href="">tumblr</a>
-                                            </li>
-                                            <li>
-                                                <a href="">linkedin</a>
-                                            </li>
-                                            <li>
-                                                <a href="">instagram</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="block-content-info-right">
-                                    <div class="block-content-info-buttons">
-                                        <button class="block-content-info-button" type="button">
-                                            SEND A REQUEST
-                                            <span class="block-content-info-button-line"></span>
-                                        </button>
-                                        <button class="block-content-info-button" type="button">
-                                            SEE presentation
-                                            <span class="block-content-info-button-line"></span>
-                                        </button>
-                                    </div>
-                                    <ul  class="block-content-info-right-clients" data-aos="fade-up"
+                                <div class="block-content block-content--contacts">
+                                    <h4 class="block-content--title" data-aos="fade-up"
                                     data-aos-duration="2000">
-                                        <li>
-                                            <img src="assets/image/partner.png" alt="partner">
-                                        </li>
-                                        <li>
-                                            <img src="assets/image/partner2.png" alt="partner">
-                                        </li>
-                                        <li>
-                                            <img src="assets/image/partner3.png" alt="partner">
-                                        </li>
-                                    </ul>
-                                </div>
+                                        We want to hear you
+                                    </h4>
+
+                                    <div class="block-content-info">
+                                        <div class="block-content-info-top">
+                                            <ul class="block-content-info-buttons">
+                                                <li class="block-content-info-button">
+                                                    <button  type="button">
+                                                        Get special access
+                                                    </button>
+
+                                                    <span class="block-content-info-button-line"></span>
+                                                </li>
+                                                <li class="block-content-info-button">
+                                                    <button  type="button">
+                                                        SEND A REQUEST
+                                                    </button>
+
+                                                    <span class="block-content-info-button-line"></span>
+                                                </li>
+                                                <li class="block-content-info-button">
+                                                    <button  type="button">
+                                                        SEE presentation
+                                                    </button>
+
+                                                    <span class="block-content-info-button-line"></span>
+                                                </li>
+                                            </ul>
+                                        </div> <!--block-content-info-bottom-->
+                                        <div class="block-content-info-bottom">
+                                            <div class="block-content-info__contacts">
+
+                                                <ul class="block-content-info__contact block-content-info__contact-social">
+                                                    <li>
+                                                        <a href="">Fiverr</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">linkedin</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Clutch</a>
+                                                    </li>
+                                                </ul> <!--block-content-info-bottom-->
+                                                <ul class="block-content-info__contact block-content-info__contact-tel">
+                                                    <li>
+                                                        <a href="tel:+16472108467">+1 (647)-210-8467</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tel:+380992395684">+38 (099)-23-95-684</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="block-content-info__contact block-content-info__contact-email">
+                                                    <a href="mailto:inquiries@marrix-power.tech">inquiries@marrix-power.tech</a>
+                                                </div>
+                                            </div>
+                                            <div class="block-content-info-bottom__partner">
+                                                <ul  class="block-content-info-right-clients" data-aos="fade-up"
+                                            data-aos-duration="2000">
+                                                    <li>
+                                                        <img src="assets/image/partner.png" alt="partner">
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/image/partner2.png" alt="partner">
+                                                    </li>
+                                                    <li>
+                                                        <img src="assets/image/partner3.png" alt="partner">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div> <!--block-content-info-bottom-->
+                                    </div>
+                                </div> <!--block-content block-content--contacts-->
                             </div>
+
                         </div>
-                    </div>
-                    <div class="screen__wrapper-footer">
-                        <div class="screen__wrapper-footer-block" data-aos="fade-right"
+                    </div> <!--container-->
+                </section> <!--services-->
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__wrapper-footer">
+                        <div class="footer__wrapper-footer-block" data-aos="fade-right"
                         data-aos-easing="linear"
                         data-aos-duration="800">
-                            <h4 class="screen__wrapper-footer-title">
+                            <h4 class="footer__wrapper-footer-title">
                                 WEB PRODUCT
                             </h4>
-                            <h4 class="screen__wrapper-footer-title">
+                            <h4 class="footer__wrapper-footer-title">
                                 MARRIX POWER
                             </h4>
                         </div>
-                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--contacts"></div>
-                        <div class="screen__wrapper-footer-block screen__wrapper-footer-block--right">
+                        <div class="footer__wrapper-footer-block footer__wrapper-footer-block-empty"></div>
+                        <div class="footer__wrapper-footer-block footerfooter__wrapper-footer-block--contacts"></div>
+                        <div class="footer__wrapper-footer-block footer__wrapper-footer-block--right">
                             <a class="btn__3um8i lines__1b6pW btn__1Q_3Z" href="">Get a Free Quote
                                 <span class="left__1U2py"></span>
                                 <span class="bdLeft__7nQdg"></span>
@@ -986,8 +971,8 @@
                         </div>
                     </div>
                 </div>
-            </div> <!--container-->
-        </section> <!--services-->
+            </footer>
+        </div>
     </div>
     <script
         src="https://code.jquery.com/jquery-3.7.1.min.js"
