@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Позначте сторінку як відвідану
         sessionStorage.setItem('visited', 'true');
     } else {
-        // Сторінка перезавантажена, встановіть позицію прокрутки на початок
+        
 
     }
     window.scrollTo(0, 0);
-    // Тут ви можете додатковий код для обробки першого візиту
+
 });
 
 
@@ -205,7 +205,7 @@ btnSkip.addEventListener('click', function() {
     firstBlock.classList.add('hidden-block--2');
 
     secondBlock.classList.remove('hidden-block');
-
+    secondBlock.classList.add('visible');
 
     reinitializeAOS();
     window.scrollBy(0, 0.1);
@@ -225,6 +225,7 @@ btnSkip2.addEventListener('click', function() {
     console.log('Клік на кнопці Skip!');
 
     secondBlock.classList.add('hidden-block--2');
+    secondBlock.classList.remove('visible');
     footerBlock.classList.add('black');
     console.log(footerBlock);
     console.log(headerBlock);
@@ -287,8 +288,10 @@ document.addEventListener('wheel', function(e) {
         else if( pageBlock.classList.contains('hidden-page') &&  body.classList.contains('no-scroll')) {
             isAnimationInProgress = true;
             secondBlock.classList.add('hidden-block--2');
+            secondBlock.classList.remove('visible');
+
             pageBlock.classList.remove('hidden-page');
-            pageBlock.classList.add('visible');
+
             footerBlock.classList.add('black');
             headerBlock.classList.add('black');
 
@@ -314,6 +317,7 @@ document.addEventListener('wheel', function(e) {
         if (scrollTop == 0 && firstBlock.classList.contains('hidden-block--2') &&  body.classList.contains('no-scroll') && !secondBlock.classList.contains('hidden-block--2') ) {
             isAnimationInProgress = true;
             firstBlock.classList.remove('hidden-block--2');
+            secondBlock.classList.remove('visible');
 
             secondBlock.classList.add('hidden-block');
             reinitializeAOS();
@@ -330,10 +334,11 @@ document.addEventListener('wheel', function(e) {
         if(scrollTop == 0 && secondBlock.classList.contains('hidden-block--2') &&  !body.classList.contains('no-scroll')) {
             isAnimationInProgress = true;
             secondBlock.classList.remove('hidden-block--2');
+            secondBlock.classList.add('visible');
             // window.scrollBy(0, 0.5);
             body.classList.add('no-scroll');
             pageBlock.classList.add('hidden-page');
-            pageBlock.classList.remove('visible');
+
 
 
             // Після завершення анімації скасувати позначку
@@ -348,3 +353,45 @@ document.addEventListener('wheel', function(e) {
 
 
 });
+
+
+//
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Додаємо клас активності, який ви хочете встановити
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  // Вибираємо всі елементи з масиву
+  const elementsToObserve = document.querySelectorAll('.block-name__line');
+
+  // Починаємо спостереження для кожного елемента
+  elementsToObserve.forEach(element => {
+    observer.observe(element);
+  });
+
+
+  const advantagesObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Перевірте, чи більше 70% елемента видно
+        if (entry.intersectionRatio >= 0.7) {
+          // Додаємо клас активності, коли більше 70% елемента видно
+          entry.target.classList.add('active');
+        }
+      } else {
+        // Видаляємо клас активності, коли елемент виходить з області видимості
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {
+    // Встановлюємо threshold на 0.7 (70% видимості)
+    threshold: 0.7
+  });
+
+  const advantagesElement = document.querySelector('.screen--advantages');
+  advantagesObserver.observe(advantagesElement);

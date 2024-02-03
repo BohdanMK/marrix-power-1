@@ -283,7 +283,7 @@ color: #243C82;
 .slide-active {
   /* display: none; */
   opacity: 0;
-  transition: all .3s linear;
+  /* transition: all .3s linear; */
 }
 
 .swiper-slide {
@@ -298,13 +298,13 @@ color: #243C82;
 
 .cascade-slider_item.now .swiper-slide {
   box-shadow: inset 35px 1px 168px -23px rgba(255,255,255,0);
-  transition: all 2s ease;
+  /* transition: all 2s ease; */
 }
 
 
 .cascade-slider_item.now .slide-active  {
   opacity: 1;
-  transition: all 2s ease;
+  /* transition: all 2s ease; */
 }
 
 .slider__desc {
@@ -326,12 +326,12 @@ color: #243C82;
   justify-content: space-between;
   align-items: baseline;
   position: absolute;
-  transition: all 2s ease;
+  /* transition: all 2s ease; */
 }
 
 .cascade-slider_item.now .slide__non-active {
   opacity: 0;
-  transition: all 2s ease;
+  /* transition: all 2s ease; */
 }
 
 .slide__non-active .slider__title {

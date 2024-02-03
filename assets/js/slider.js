@@ -5,6 +5,7 @@
       arrowClass = opt.arrowClass || 'cascade-slider_arrow',
       $item = $this.find('.' + itemClass),
       $arrow = $this.find('.' + arrowClass),
+      $dots = $('.cascade-slider_nav .cascade-slider_dot'), // Вибір точок відповідного контейнера
       itemCount = $item.length;
 
     var defaultIndex = 0;
@@ -14,9 +15,11 @@
     $arrow.on('click', function() {
       var action = $(this).data('action'),
         nowIndex = $item.index($this.find('.now'));
+        console.log(nowIndex);
 
       if(action == 'next') {
         if(nowIndex == itemCount - 1) {
+
           changeIndex(0);
         } else {
           changeIndex(nowIndex + 1);
@@ -24,13 +27,17 @@
       } else if (action == 'prev') {
         if(nowIndex == 0) {
           changeIndex(itemCount - 1);
+
         } else {
           changeIndex(nowIndex - 1);
         }
       }
 
-      $('.cascade-slider_dot').removeClass('cur');
-      //$('.cascade-slider_dot').next().addClass('cur');
+      // Видаляємо клас cur у всіх точках
+      $dots.removeClass('cur');
+      // Додаємо клас cur відповідній точці
+      console.log($dots.eq(nowIndex));
+      $dots.eq(nowIndex).addClass('cur');
     });
 
     // add data attributes
@@ -86,6 +93,8 @@
           $item.eq(index).addClass('prev');
         }
       });
+
+
     }
   };
 })(jQuery);
