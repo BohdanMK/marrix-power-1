@@ -2614,10 +2614,10 @@ body.no-scroll {
     bottom: 0;
   }
 
-  .tech-block__list-item {
+  /* .tech-block__list-item {
     max-width: 110px;
     height: 90px;
-  }
+  } */
 
   .owl-carousel .owl-item img {
     object-fit: fill;
@@ -2642,10 +2642,10 @@ body.no-scroll {
     top: -30px;
   }
 
-  .owl-carousel .owl-item img {
+  /* .owl-carousel .owl-item img {
     height: 100px;
     object-fit: contain;
-  }
+  } */
 
   .advantages__item-title {
     font-size: 2.6rem;
