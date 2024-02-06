@@ -163,7 +163,7 @@ color: #243C82;
   background-color:#243C82;
 }
 
-@media (min-width: 460px) and (max-width: 680px) {
+/* @media (min-width: 460px) and (max-width: 680px) {
   .cascade-slider_item {
     position: absolute;
     top: 50%;
@@ -206,8 +206,8 @@ color: #243C82;
   .cascade-slider_nav {
     display:none;
   }
-}
-@media (max-width: 460px) {
+} */
+/* @media (max-width: 460px) {
   .cascade-slider_item {
     position: absolute;
     top: 50%;
@@ -251,7 +251,7 @@ color: #243C82;
     display:none;
   }
 
-}
+} */
 
 
 .swiper-slide  {
@@ -376,3 +376,4 @@ color: #243C82;
   bottom: 5px;
   left: 50%;
 }
+

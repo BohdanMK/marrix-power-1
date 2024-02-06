@@ -1,0 +1,49 @@
+
+
+
+  .cursor,
+  .cursor2,
+  .cursor3{
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+    transition: all .3s linear;
+  }
+  .cursor {
+    background-color: #00E0FF;
+    z-index: 109;
+    height: 2px;
+    width: 2px;
+  }
+  .cursor2,
+  .cursor3{
+    height: 50px;
+    width: 50px;
+    z-index: 108;
+    transition: all 0.3s ease-out;
+  }
+  .cursor2.hover,
+  .cursor3.hover {
+    transform: scale(1.4) translateX(-35%) translateY(-35%);
+    border: none;
+    background: transparent;
+  }
+
+  .cursor2.hover {
+    background: rgba(0, 224, 255,0.3);
+  }
+
+
+  .ball {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #70b2ff;
+    z-index: 100;
+    transition: all .3s linear;
+  }
