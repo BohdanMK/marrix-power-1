@@ -1,7 +1,7 @@
 function createGlitchEffect(elementId) {
     let bg = document.getElementById(elementId);
     let intervalId;
-    let count = 140;
+    let count = 240;
     let interval = false;
 
     function showGlitch() {
@@ -28,8 +28,8 @@ function createGlitchEffect(elementId) {
                 glitch[i].style.left = Math.floor(Math.random() * 75) + '%';
                 console.log(glitch[i].style.left);
                 glitch[i].style.top = Math.floor(Math.random() * 35) + '%';
-                glitch[i].style.width = Math.floor(70) + 'px';
-                glitch[i].style.height = Math.floor(18) + 'px';
+                glitch[i].style.width = Math.floor(60) + 'px';
+                glitch[i].style.height = Math.floor(15) + 'px';
             }
 
             iterationCount++;
