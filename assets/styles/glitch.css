@@ -1,0 +1,29 @@
+.glitch-block  {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    /* background-color: antiquewhite; */
+}
+
+.glitch-block div {
+    max-width: 250px;
+
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.box {
+    position: absolute;
+    background-color: #121212;
+    opacity: 1;
+}
