@@ -12,8 +12,12 @@
     /* background-color: antiquewhite; */
 }
 
-.glitch-block div {
-    max-width: 250px;
+.glitch-block > div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+    /* row-gap: 10px; */
 
     height: 100%;
 
@@ -25,8 +29,28 @@
 }
 
 
+#glitch1 {
+    width: 250px;
+    margin-left: -50px;
+}
+
+#glitch2 {
+    width: 200px;
+    margin-left: -100px;
+}
+
+#glitch3 {
+    width: 600px;
+    margin-left: -225px;
+}
+
+
 .box {
-    position: absolute;
+    /* position: absolute; */
     background-color: #121212;
     opacity: 1;
 }
+
+/* .glitch-block > div > div:nth-child(even) {
+    background-color: transparent;
+} */

@@ -25,9 +25,9 @@ function createGlitchEffect(elementId) {
             let glitch = document.getElementsByClassName('box');
 
             for (let i = 0; i < glitch.length; i++) {
-                glitch[i].style.left = Math.floor(Math.random() * 75) + '%';
+                glitch[i].style.marginLeft = Math.floor(Math.random() * 45) + 'px';
                 console.log(glitch[i].style.left);
-                glitch[i].style.top = Math.floor(Math.random() * 35) + '%';
+                glitch[i].style.marginTop = Math.floor(Math.random() * 15) + 'px';
                 glitch[i].style.width = Math.floor(60) + 'px';
                 glitch[i].style.height = Math.floor(15) + 'px';
             }
