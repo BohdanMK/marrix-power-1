@@ -4230,4 +4230,20 @@ body.no-scroll {
     max-width: -1px;
   }
 
+  .block-content-info-button-line::after {
+    content: "";
+    width: 568px;
+    height: 1px;
+    display: block;
+
+    position: absolute;
+    top: 50%;
+
+    background-color: #303030;
+  }
+
+  .block-content-info {
+    overflow: hidden;
+  }
+
 }
