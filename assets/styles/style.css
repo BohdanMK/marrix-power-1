@@ -1627,7 +1627,7 @@ body.no-scroll {
     font-weight: 700;
     font-size: 3rem;
     line-height: 150%;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: var(--white);
 }
 
@@ -3876,7 +3876,7 @@ body.no-scroll {
 
  @media (max-width: 568px) {
   .cascade-slider_container {
-    height: 500px;
+    height: 540px;
     overflow-y: hidden;
     overflow-x: auto;
 
@@ -4133,6 +4133,101 @@ body.no-scroll {
   .screen.screen--innovate {
     display: none!important;
     position: absolute;
+  }
+
+  .lang {
+    display: none;
+    position: absolute;
+  }
+
+  .screen.screen--our-services {
+    padding-bottom: 0;
+  }
+
+  .screen.screen--our-technologies .block-name {
+    margin-bottom: 30px;
+  }
+
+  .block__content-title {
+    text-align: left;
+  }
+
+  .block__content-subtitle {
+    font-size: 3.8rem;
+    text-align: left;
+  }
+
+  .screen.screen--our-technologies {
+    padding-bottom: 75px;
+  }
+
+  .screen.screen--advantages .block-name {
+    margin-bottom: 26px;
+  }
+
+  .screen.screen--clients {
+    padding-top: 87px;
+    padding-bottom: 68px;
+  }
+
+  .block-content-info__contact-social {
+    justify-content: space-between;
+  }
+
+  .block-content-info__contact-tel {
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    font-size: 1.8rem;
+    font-weight: 800px;
+  }
+
+  .header {
+    padding-top: 20px;
+    top: 0;
+  }
+
+  .header.white {
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .header.black {
+    background-color: rgba(255, 255, 255, .8);
+  }
+
+  .burger__line {
+    width: 27px;
+
+  }
+
+  .burger__line.burger__line--third {
+    width: 20px;
+  }
+
+  .burger {
+    row-gap: 8px;
+  }
+
+  .block-content-info__contact-email {
+    font-size: 1.8rem;
+  }
+
+  .screen.screen--information .block-name {
+    margin-bottom: 30px;
+  }
+
+  .block-name__title{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .block-name__line {
+    width: 84px;
+    height: 1px;
+  }
+
+  .block-content-info-button {
+    max-width: -1px;
   }
 
 }
