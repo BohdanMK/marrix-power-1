@@ -882,6 +882,7 @@ body.no-scroll {
   display: flex;
   column-gap: 30px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .menu__block-btn {
@@ -978,6 +979,7 @@ body.no-scroll {
   transition: transform 0.22s linear; /* Відключаємо згладжування для зворотньої анімації */
 }
 
+
 .burger:hover .burger__line-inner:nth-child(2) {
   transform: translateX(0%);
   transition: transform 0.2s linear; /* Відключаємо згладжування для зворотньої анімації */
@@ -1004,6 +1006,83 @@ body.no-scroll {
   transition: transform 0.2s linear;
   transition-delay: 0.20s;
 }
+
+.screen.screen--innovate .menu__block-btn {
+  transform: translateX(-100%);
+  transition: all 1s linear;
+}
+
+.screen.screen--innovate.visible .menu__block-btn {
+    animation: animateMenuBtn .5s linear forwards;
+    animation-delay: .8s;
+}
+
+.screen.screen--innovate .burger, .screen.screen--main .burger {
+  transform: translateX(100%);
+  transition: all 1s linear;
+}
+
+.screen.screen--innovate.visible .burger, .screen.screen--main.visible .burger {
+    animation: animateBurger .5s linear forwards;
+    animation-delay: .8s;
+}
+
+@keyframes animateBurger {
+  0%{
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animateMenuBtn {
+  0% {
+    transform: translateY(-100%);
+  } 100% {
+    transform: translateY(0%);
+  }
+}
+
+.screen.screen--main .logo.logo--head {
+  transform: translateY(-100%);
+  transition: all 1s linear;
+}
+
+.screen.screen--innovate .logo.logo--head {
+  transform: translateY(-100%);
+  transition: all 1s linear;
+}
+
+.screen.screen--innovate.visible .logo.logo--head {
+  animation: animateMenuBtn .5s linear forwards;
+  animation-delay: .5s;
+}
+
+.screen.screen--main.visible .logo.logo--head {
+  animation: animateMenuBtn .5s linear forwards;
+  animation-delay: .8s;
+}
+
+.page .menu__block-btn {
+  transform: translateY(-100%);
+}
+
+.page.visible .menu__block-btn {
+  animation: animateMenuBtn .5s linear forwards;
+  animation-delay: .8s;
+}
+
+.page .burger {
+  transform: translateX(100%);
+  transition: all 1s linear;
+}
+
+.page.visible .burger {
+    animation: animateBurger .5s linear forwards;
+    animation-delay: .8s;
+}
+
 
 /*logo*/
 
@@ -2974,7 +3053,7 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 160px
+  height: 142px
 }
 
 .contacts__content .bottom-field {
@@ -3382,6 +3461,24 @@ body.no-scroll {
 
     } 100% {
       top: 2.5px;
+      transform: rotate(-45deg);
+
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  @keyframes moveSecondLine {
+    0% {
+      top: 0;
+      transform: rotate(-10deg);
+
+    } 50% {
+      top: 0;
+      transform: rotate(10deg);
+
+    } 100% {
+      top: 3px;
       transform: rotate(-45deg);
 
     }
@@ -4525,6 +4622,7 @@ body.no-scroll {
 
 
   .block-content-info__contact-email {
+    max-height: 19px;
     font-size: 1.7rem;
   }
 
@@ -4866,6 +4964,11 @@ body.no-scroll {
     font-size: 1.8rem;
   }
 
+  .block-content-info__contact-tel li {
+    max-height: 30px;
+
+}
+
   .block-content-info-right-clients {
     max-width: 481px;
   }
@@ -5198,6 +5301,14 @@ body.no-scroll {
     font-size: 1.4rem;
   }
 
+  .screen--information .block-content-info__contact-tel li {
+    max-height: 24px;
+  }
+
+  .screen--information .block-content-info__contact-social li {
+    max-height: 18px;
+  }
+
   .block-content-info__contact-tel {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5429,8 +5540,12 @@ body.no-scroll {
   }
 
   .contacts__content .field {
-    flex-direction: column;
-    padding-top: 15px;
+    /* flex-direction: column; */
+    padding-top: 0px;
+  }
+
+  .contacts__content .field__title {
+    width: 95px;
   }
 
   .contacts__content .area {
@@ -5457,7 +5572,7 @@ body.no-scroll {
   }
 
   .contacts__content .field {
-    height: 75px;
+    height: 62px;
   }
 
   .contacts__content .error-message {
@@ -5472,6 +5587,10 @@ body.no-scroll {
   .menu-popup__line {
     top: 44.5px;
     right: 6vw;
+  }
+
+  .contacts__content .field__title {
+    height: 59px;
   }
 
 
@@ -5745,6 +5864,19 @@ body.no-scroll {
     position: absolute;
   }
 
+  .menu-popup .lang {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+
+    position: static;
+  }
+
+  .menu-popup .lang__item {
+    margin-left: 8px;
+  }
+
   .screen.screen--our-services {
     padding-bottom: 0;
   }
@@ -5788,7 +5920,7 @@ body.no-scroll {
   }
 
   .header {
-    padding-top: 20px;
+    padding-top: 25px;
     top: 0;
   }
 
@@ -5889,6 +6021,20 @@ body.no-scroll {
   .popup-contact__close {
     width: 29px;
     height: 30px;
+  }
+
+  .navigations__list {
+    margin-bottom: 70px;
+  }
+
+  .menu-popup__content-body .block-content-info__contact.block-content-info__contact-social {
+    justify-content: start;
+    column-gap: 63px;
+  }
+
+  .screen.screen--advantages {
+    padding-top: 87px;
+
   }
 
 }

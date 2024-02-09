@@ -192,6 +192,9 @@ const btnSkip = document.querySelector('.screen--main .screen__skip-btn'),
     headerBlock = document.querySelector('.page .header'),
     footerBlock = document.querySelector('.page .footer');
 
+
+    firstBlock.classList.add('visible');
+
 function initClassForBlocks() {
 
     secondBlock.style.display = 'flex';
@@ -287,6 +290,7 @@ if(windowWidth > 568) {
 
             if (secondBlock.classList.contains('hidden-block') &&  body.classList.contains('no-scroll')) {
                 isAnimationInProgress = true;
+
                 firstBlock.classList.add('hidden-block--2');
 
                 secondBlock.classList.remove('hidden-block');
@@ -296,19 +300,28 @@ if(windowWidth > 568) {
                 setTimeout(function() {
                     isAnimationInProgress = false;
                 }, 2000);
+                setTimeout(function() {
+                    firstBlock.classList.remove('visible');
+
+                }, 1000);
+
                 return;
             }
 
             else if( pageBlock.classList.contains('hidden-page') &&  body.classList.contains('no-scroll')) {
                 isAnimationInProgress = true;
                 secondBlock.classList.add('hidden-block--2');
-                secondBlock.classList.remove('visible');
 
                 pageBlock.classList.remove('hidden-page');
+                pageBlock.classList.add('visible');
 
                 footerBlock.classList.add('black');
                 headerBlock.classList.add('black');
 
+                setTimeout(function() {
+                    secondBlock.classList.remove('visible');
+
+                }, 1000);
 
                 reinitializeAOS();
                 setTimeout(function() {
@@ -331,10 +344,15 @@ if(windowWidth > 568) {
             if (scrollTop == 0 && firstBlock.classList.contains('hidden-block--2') &&  body.classList.contains('no-scroll') && !secondBlock.classList.contains('hidden-block--2') ) {
                 isAnimationInProgress = true;
                 firstBlock.classList.remove('hidden-block--2');
-                secondBlock.classList.remove('visible');
+                firstBlock.classList.add('visible');
 
                 secondBlock.classList.add('hidden-block');
                 reinitializeAOS();
+
+                setTimeout(function() {
+                    secondBlock.classList.remove('visible');
+
+                }, 1000);
 
 
                 // Після завершення анімації скасувати позначку
@@ -353,6 +371,11 @@ if(windowWidth > 568) {
                 body.classList.add('no-scroll');
                 pageBlock.classList.add('hidden-page');
 
+
+                setTimeout(function() {
+                    pageBlock.classList.remove('visible');
+
+                }, 1000);
 
 
                 // Після завершення анімації скасувати позначку
