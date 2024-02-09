@@ -382,7 +382,7 @@ if(windowWidth > 568) {
 
     if (currentTouchY < lastTouchY) {
         var scrollTop = window.scrollY || document.documentElement.scrollTop;
-    
+
 
         // Скрол вниз
         if (pageBlock.classList.contains('hidden-page')) {
@@ -459,6 +459,8 @@ const observer = new IntersectionObserver(entries => {
       if (entry.isIntersecting) {
         // Додаємо клас активності, який ви хочете встановити
         entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
       }
     });
   });
@@ -492,3 +494,150 @@ const observer = new IntersectionObserver(entries => {
 
   const advantagesElement = document.querySelector('.screen--advantages');
   advantagesObserver.observe(advantagesElement);
+
+
+  // add contact popup
+
+  const openModalBtns = document.querySelectorAll('.open-form');
+  const popupContact = document.querySelector('.popup-contact');
+  const contactPopup = document.querySelector('.popup-contact__close');
+
+  openModalBtns.forEach((item) => {
+    console.log(item);
+    item.addEventListener('click', () => {
+        popupContact.classList.add('active');
+    });
+  });
+
+  contactPopup.addEventListener('click', () => {
+    popupContact.classList.remove('active');
+});
+
+
+
+
+
+$(document).ready(function () {
+    const screenHeight = window.innerHeight;
+    const container = $('.screen__wrapper');
+    let containerWidthWithBorders = container.width();
+
+    let stateOfAction = false;
+
+    const burgerBtns = $('.burger');
+    const menuPopupLine = $('.menu-popup__line');
+    const distanceFromTop = menuPopupLine.offsetTop;
+    console.log(distanceFromTop);
+    const menuBg = $('.menu-popup__bg');
+    const menuPopUpContent = $('.menu-popup__content');
+    const modalMenuPage = $('.menu-popup');
+    const burgerPopUp = $('.burger.burger--popup');
+    const headerBlock = $('.header');
+    const secondBlock = $('.screen--innovate');
+
+    console.log(burgerPopUp);
+
+    menuPopUpContent.width(containerWidthWithBorders);
+
+    burgerBtns.on('click', function () {
+        if(stateOfAction === true) {
+            return;
+        }
+
+        stateOfAction = true;
+
+        if ($(this).hasClass('active')) {
+
+            // Виконати зворотні дії при повторному кліку
+            $(this).removeClass('active');
+
+            menuPopupLine.css('transform', 'translateY(0)');
+            menuBg.css('height', '0');
+            menuPopUpContent.css({ 'height': '0', 'opacity': 0 });
+            burgerBtns.removeClass('active');
+
+            setTimeout(() => {
+                modalMenuPage.addClass('hidden').removeClass('active');
+                menuPopupLine.css('width', '0');
+            }, 400);
+        } else {
+            // Виконати дії при першому кліку
+            $(this).addClass('active');
+            modalMenuPage.removeClass('hidden').addClass('active');
+            menuPopupLine.css('width', containerWidthWithBorders + 'px');
+
+            if(headerBlock.hasClass('black') && secondBlock.hasClass('hidden-block--2')) {
+                menuPopupLine.css({ 'background': '#121212'});
+
+            }
+
+            if(headerBlock.hasClass('white') && secondBlock.hasClass('hidden-block--2')) {
+                menuPopupLine.css({ 'background': '#ffffff'});
+
+            }
+
+            menuPopUpContent.css('width', containerWidthWithBorders + 'px');
+            burgerPopUp.addClass('active');
+            setTimeout(() => {
+                menuPopupLine.css('transform', 'translateY(95vh)');
+            }, 415);
+
+            setTimeout(() => {
+                menuBg.css({ 'height': '100vh' });
+                menuPopUpContent.css({ 'height': '100vh', 'opacity': 1 });
+            }, 415);
+
+
+        }
+
+        setTimeout(() => {
+            stateOfAction = false;
+        }, 2000);
+    });
+});
+
+
+// change logo on one letter when we scroll our website
+
+const headerLogo = document.querySelector('header .logo.logo--head');
+
+
+window.addEventListener('scroll', () => {
+    // Отримати позицію скролу від гори сайту
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    // Вивести в консоль позицію скролу
+
+    if(scrollPosition > 50) {
+        headerLogo.classList.add('small');
+    } else {
+        headerLogo.classList.remove('small');
+    }
+
+});
+
+
+// make on focus input when click on label
+
+const formLabels = document.querySelectorAll('.field__title');
+console.log(formLabels);
+
+formLabels.forEach((item) => {
+    item.addEventListener('click', () => {
+        console.log(12312312313)
+        // Знаходимо батьківський контейнер з класом clearfix
+        const clearfixContainer = item.closest('.clearfix');
+
+        // Перевіряємо, чи знайдено такий контейнер
+        if (clearfixContainer) {
+            // Знаходимо елемент input або textarea
+            const inputOrTextarea = clearfixContainer.querySelector('input, textarea');
+
+            // Перевіряємо, чи знайдено такий елемент
+            if (inputOrTextarea) {
+                // Робимо, якщо елемент знайдено
+                inputOrTextarea.focus();
+            }
+        }
+    });
+});

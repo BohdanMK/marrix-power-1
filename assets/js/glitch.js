@@ -1,14 +1,14 @@
 var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 if(windowWidth > 991) {
-    function createGlitchEffect(elementId) {
+    function createGlitchEffect(elementId, countItems, widthElement, heightElement) {
         let bg = document.getElementById(elementId);
         let intervalId;
-        let count = 240;
+        let count = countItems;
         let interval = false;
 
         function showGlitch() {
-            console.log(interval);
+            // console.log(interval);
             if (interval) {
                 console.log(interval);
                 return;
@@ -29,10 +29,10 @@ if(windowWidth > 991) {
 
                 for (let i = 0; i < glitch.length; i++) {
                     glitch[i].style.marginLeft = Math.floor(Math.random() * 45) + 'px';
-                    console.log(glitch[i].style.left);
+                    // console.log(glitch[i].style.left);
                     glitch[i].style.marginTop = Math.floor(Math.random() * 15) + 'px';
-                    glitch[i].style.width = Math.floor(60) + 'px';
-                    glitch[i].style.height = Math.floor(15) + 'px';
+                    glitch[i].style.width = Math.floor(widthElement) + 'px';
+                    glitch[i].style.height = Math.floor(heightElement) + 'px';
                 }
 
                 iterationCount++;
@@ -73,8 +73,12 @@ if(windowWidth > 991) {
     }
 
     // Виклик функції для елементу з id "glitch"
-    createGlitchEffect('glitch1');
-    createGlitchEffect('glitch2');
-    createGlitchEffect('glitch3');
+    createGlitchEffect('glitch1', 240, 60, 15);
+    createGlitchEffect('glitch2', 240, 60, 15);
+    createGlitchEffect('glitch3', 240, 60, 15);
+    createGlitchEffect('glitch6', 240, 80, 20);
+    createGlitchEffect('glitch7', 140, 80, 20);
+    createGlitchEffect('glitch8', 240, 80, 20);
+
 }
 
