@@ -247,9 +247,6 @@ btnSkip2.addEventListener('click', function() {
     secondBlock.classList.add('hidden-block--2');
     secondBlock.classList.remove('visible');
     footerBlock.classList.add('black');
-    console.log(footerBlock);
-    console.log(headerBlock);
-    headerBlock.classList.add('black');
 
 
     pageBlock.classList.remove('hidden-page');
@@ -260,6 +257,7 @@ btnSkip2.addEventListener('click', function() {
     setTimeout(function() {
         body.classList.remove('no-scroll');
         window.scrollBy(0, 0.1);
+        headerBlock.classList.add('black');
     }, 1050);
 
     setTimeout(function() {
@@ -282,20 +280,21 @@ if(windowWidth > 568) {
         var deltaY = e.deltaY;
         var scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        console.log(scrollTop);
+        // console.log(scrollTop);
         if (deltaY > 0) {
-            console.log('Колесо миші рухається вниз');
+            // console.log('Колесо миші рухається вниз');
 
 
 
             if (secondBlock.classList.contains('hidden-block') &&  body.classList.contains('no-scroll')) {
                 isAnimationInProgress = true;
+                reinitializeAOS();
 
                 firstBlock.classList.add('hidden-block--2');
 
                 secondBlock.classList.remove('hidden-block');
                 secondBlock.classList.add('visible');
-                reinitializeAOS();
+
 
                 setTimeout(function() {
                     isAnimationInProgress = false;
@@ -413,8 +412,9 @@ if(windowWidth > 568) {
                 isAnimationInProgress = true;
                 firstBlock.classList.add('hidden-block--2');
 
-
+                body.classList.add('blocked');
                 pageBlock.classList.remove('hidden-page');
+                pageBlock.classList.add('visible');
 
                 footerBlock.classList.add('black');
                 headerBlock.classList.add('black');
@@ -422,7 +422,9 @@ if(windowWidth > 568) {
 
                 reinitializeAOS();
                 setTimeout(function() {
+                    body.classList.remove('blocked');
                     body.classList.remove('no-scroll');
+                    firstBlock.classList.remove('visible');
                     window.scrollBy(0, 0.1);
                 }, 1050);
 
@@ -446,13 +448,20 @@ if(windowWidth > 568) {
         if (firstBlock.classList.contains('hidden-block--2') && scrollTop === 0) {
             isAnimationInProgress = true;
             firstBlock.classList.remove('hidden-block--2');
-
+            firstBlock.classList.add('visible');
+            body.classList.add('blocked');
+            body.classList.add('no-scroll');
 
             pageBlock.classList.add('hidden-page');
+            setTimeout(function() {
+                pageBlock.classList.remove('visible');
+                body.classList.add('blocked');
+
+            }, 1000);
 
             reinitializeAOS();
             setTimeout(function() {
-                body.classList.remove('no-scroll');
+
                 window.scrollBy(0, 0.1);
             }, 1050);
 
@@ -526,7 +535,7 @@ const observer = new IntersectionObserver(entries => {
   const contactPopup = document.querySelector('.popup-contact__close');
 
   openModalBtns.forEach((item) => {
-    console.log(item);
+    // console.log(item);
     item.addEventListener('click', () => {
         popupContact.classList.add('active');
     });
@@ -547,7 +556,7 @@ $(document).ready(function () {
 
     let stateOfAction = false;
 
-    const burgerBtns = $('.burger');
+    const burgerBtns = $('.burger--popup');
     const menuPopupLine = $('.menu-popup__line');
     const distanceFromTop = menuPopupLine.offsetTop;
     console.log(distanceFromTop);
@@ -558,7 +567,7 @@ $(document).ready(function () {
     const headerBlock = $('.header');
     const secondBlock = $('.screen--innovate');
 
-    console.log(burgerPopUp);
+    // console.log(burgerPopUp);
 
     menuPopUpContent.width(containerWidthWithBorders);
 
@@ -572,7 +581,7 @@ $(document).ready(function () {
         if ($(this).hasClass('active')) {
 
             // Виконати зворотні дії при повторному кліку
-            $(this).removeClass('active');
+            burgerBtns.removeClass('active');
 
             menuPopupLine.css('transform', 'translateY(0)');
             menuBg.css('height', '0');
@@ -580,12 +589,16 @@ $(document).ready(function () {
             burgerBtns.removeClass('active');
 
             setTimeout(() => {
-                modalMenuPage.addClass('hidden').removeClass('active');
+
                 menuPopupLine.css('width', '0');
             }, 400);
+            setTimeout(() => {
+                modalMenuPage.addClass('hidden').removeClass('active');
+
+            }, 1200);
         } else {
             // Виконати дії при першому кліку
-            $(this).addClass('active');
+            burgerBtns.addClass('active');
             modalMenuPage.removeClass('hidden').addClass('active');
             menuPopupLine.css('width', containerWidthWithBorders + 'px');
 
@@ -615,7 +628,7 @@ $(document).ready(function () {
 
         setTimeout(() => {
             stateOfAction = false;
-        }, 2000);
+        }, 1200);
     });
 });
 
@@ -664,3 +677,30 @@ formLabels.forEach((item) => {
         }
     });
 });
+
+
+const footerWrapper = document.querySelector('.footer');
+console.log(footerWrapper);
+
+const footerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Перевірте, чи більше 70% елемента видно
+        if (entry.intersectionRatio >= 0.7) {
+          // Додаємо клас активності, коли більше 70% елемента видно
+          entry.target.classList.add('active');
+          footerWrapper.classList.add('active');
+        }
+      } else {
+        // Видаляємо клас активності, коли елемент виходить з області видимості
+        entry.target.classList.remove('active');
+        footerWrapper.classList.remove('active');
+      }
+    });
+  }, {
+    // Встановлюємо threshold на 0.7 (70% видимості)
+    threshold: 0.7
+});
+
+const footerElement = document.querySelector('.screen--information');
+footerObserver.observe(footerElement);

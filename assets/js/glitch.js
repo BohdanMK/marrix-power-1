@@ -51,7 +51,7 @@ if(windowWidth > 991) {
 
         // Отримайте елемент "page"
         var pageElement = document.getElementById(elementId);
-        console.log(pageElement);
+        // console.log(pageElement);
 
         // Перевірте, чи елемент існує перед додаванням обробників подій
         if (pageElement) {
@@ -76,9 +76,9 @@ if(windowWidth > 991) {
     createGlitchEffect('glitch1', 240, 60, 15);
     createGlitchEffect('glitch2', 240, 60, 15);
     createGlitchEffect('glitch3', 240, 60, 15);
-    createGlitchEffect('glitch6', 240, 80, 20);
-    createGlitchEffect('glitch7', 140, 80, 20);
-    createGlitchEffect('glitch8', 240, 80, 20);
+    createGlitchEffect('glitch6', 240, 40, 12.5);
+    createGlitchEffect('glitch7', 140, 40, 12.5);
+    createGlitchEffect('glitch8', 240, 40, 12.5);
 
 }
 

@@ -17,6 +17,7 @@
         nowIndex = $item.index($this.find('.now'));
         console.log(nowIndex);
 
+
       if(action == 'next') {
         if(nowIndex == itemCount - 1) {
 
