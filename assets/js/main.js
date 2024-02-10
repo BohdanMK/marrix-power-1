@@ -679,6 +679,8 @@ formLabels.forEach((item) => {
 });
 
 
+//animation in footer when we scrolled almost down of page
+
 const footerWrapper = document.querySelector('.footer');
 console.log(footerWrapper);
 
@@ -704,3 +706,31 @@ const footerObserver = new IntersectionObserver(entries => {
 
 const footerElement = document.querySelector('.screen--information');
 footerObserver.observe(footerElement);
+
+
+
+
+
+
+const techObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Перевірте, чи більше 70% елемента видно
+        if (entry.intersectionRatio >= 0.7) {
+          // Додаємо клас активності, коли більше 70% елемента видно
+          entry.target.classList.add('active');
+
+        }
+      } else {
+        // Видаляємо клас активності, коли елемент виходить з області видимості
+        entry.target.classList.remove('active');
+       
+      }
+    });
+  }, {
+    // Встановлюємо threshold на 0.7 (70% видимості)
+    threshold: 0.7
+});
+
+const techElement = document.querySelector('.screen--our-technologies');
+techObserver.observe(techElement);
