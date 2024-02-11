@@ -524,8 +524,13 @@ const observer = new IntersectionObserver(entries => {
     threshold: 0.7
   });
 
-  const advantagesElement = document.querySelector('.screen--advantages');
-  advantagesObserver.observe(advantagesElement);
+  const advantagesElement = document.querySelectorAll('.page .screen');
+  console.log(advantagesElement);
+//   advantagesObserver.observe(advantagesElement);
+
+advantagesElement.forEach(element => {
+    observer.observe(element);
+  });
 
 
   // add contact popup
@@ -712,25 +717,25 @@ footerObserver.observe(footerElement);
 
 
 
-const techObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Перевірте, чи більше 70% елемента видно
-        if (entry.intersectionRatio >= 0.7) {
-          // Додаємо клас активності, коли більше 70% елемента видно
-          entry.target.classList.add('active');
+// const techObserver = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         // Перевірте, чи більше 70% елемента видно
+//         if (entry.intersectionRatio >= 0.7) {
+//           // Додаємо клас активності, коли більше 70% елемента видно
+//           entry.target.classList.add('active');
 
-        }
-      } else {
-        // Видаляємо клас активності, коли елемент виходить з області видимості
-        entry.target.classList.remove('active');
-       
-      }
-    });
-  }, {
-    // Встановлюємо threshold на 0.7 (70% видимості)
-    threshold: 0.7
-});
+//         }
+//       } else {
+//         // Видаляємо клас активності, коли елемент виходить з області видимості
+//         entry.target.classList.remove('active');
 
-const techElement = document.querySelector('.screen--our-technologies');
-techObserver.observe(techElement);
+//       }
+//     });
+//   }, {
+//     // Встановлюємо threshold на 0.7 (70% видимості)
+//     threshold: 0.7
+// });
+
+// const techElement = document.querySelector('.screen--our-technologies');
+// techObserver.observe(techElement);
