@@ -272,7 +272,7 @@ btnSkip2.addEventListener('click', function() {
 
 /*скролл*/
 
-if(windowWidth > 568) {
+if(windowWidth > 991) {
     document.addEventListener('wheel', function(e) {
         if (isAnimationInProgress) {
             return; // Якщо анімація вже виконується, вийти з обробника
@@ -717,25 +717,3 @@ footerObserver.observe(footerElement);
 
 
 
-// const techObserver = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         // Перевірте, чи більше 70% елемента видно
-//         if (entry.intersectionRatio >= 0.7) {
-//           // Додаємо клас активності, коли більше 70% елемента видно
-//           entry.target.classList.add('active');
-
-//         }
-//       } else {
-//         // Видаляємо клас активності, коли елемент виходить з області видимості
-//         entry.target.classList.remove('active');
-
-//       }
-//     });
-//   }, {
-//     // Встановлюємо threshold на 0.7 (70% видимості)
-//     threshold: 0.7
-// });
-
-// const techElement = document.querySelector('.screen--our-technologies');
-// techObserver.observe(techElement);

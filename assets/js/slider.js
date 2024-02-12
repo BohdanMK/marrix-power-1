@@ -58,11 +58,7 @@
         }
       }
 
-      // Видаляємо клас cur у всіх точках
-      $dots.removeClass('cur');
-      // Додаємо клас cur відповідній точці
-      console.log($dots.eq(nowIndex));
-      $dots.eq(nowIndex).addClass('cur');
+
     });
 
     // add data attributes
@@ -98,6 +94,11 @@
         }
       });
 
+      // Видаляємо клас cur у всіх точках
+      $dots.removeClass('cur');
+      // Додаємо клас cur відповідній точці
+      console.log($dots.eq(nowIndex));
+      $dots.eq(nowIndex).addClass('cur');
 
     }
   };
