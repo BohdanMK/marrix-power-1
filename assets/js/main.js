@@ -192,296 +192,300 @@ const btnSkip = document.querySelector('.screen--main .screen__skip-btn'),
     headerBlock = document.querySelector('.page .header'),
     footerBlock = document.querySelector('.page .footer');
 
+    if(firstBlock) {
 
-    firstBlock.classList.add('visible');
+        firstBlock.classList.add('visible');
 
-function initClassForBlocks() {
+        function initClassForBlocks() {
 
-    secondBlock.style.display = 'flex';
-    pageBlock.style.display = 'block';
-
-}
-
-setTimeout(()=> {
-    initClassForBlocks();
-}, 5000)
-
-
-
-
-// console.log(btnSkip);
-
-var isAnimationInProgress = false;
-
-
-btnSkip.addEventListener('click', function() {
-    if (isAnimationInProgress) {
-        return; // Якщо анімація вже виконується, вийти з обробника
-    }
-    isAnimationInProgress = true;
-    // Ваш код для обробки кліку тут
-    console.log('Клік на кнопці Skip!');
-
-    firstBlock.classList.add('hidden-block--2');
-
-    secondBlock.classList.remove('hidden-block');
-    secondBlock.classList.add('visible');
-
-    reinitializeAOS();
-    window.scrollBy(0, 0.1);
-    setTimeout(function() {
-
-        isAnimationInProgress = false;
-        console.log(isAnimationInProgress);
-    }, 2000);
-});
-
-btnSkip2.addEventListener('click', function() {
-    if (isAnimationInProgress) {
-        return; // Якщо анімація вже виконується, вийти з обробника
-    }
-    isAnimationInProgress = true;
-    // Ваш код для обробки кліку тут
-    console.log('Клік на кнопці Skip!');
-
-    secondBlock.classList.add('hidden-block--2');
-    secondBlock.classList.remove('visible');
-    footerBlock.classList.add('black');
-
-
-    pageBlock.classList.remove('hidden-page');
-    pageBlock.classList.add('visible');
-
-    reinitializeAOS();
-    window.scrollBy(0, 1);
-    setTimeout(function() {
-        body.classList.remove('no-scroll');
-        window.scrollBy(0, 0.1);
-        headerBlock.classList.add('black');
-    }, 1050);
-
-    setTimeout(function() {
-
-        isAnimationInProgress = false;
-        console.log(isAnimationInProgress);
-    }, 2000);
-
-
-});
-
-
-/*скролл*/
-
-if(windowWidth > 991) {
-    document.addEventListener('wheel', function(e) {
-        if (isAnimationInProgress) {
-            return; // Якщо анімація вже виконується, вийти з обробника
-        }
-        var deltaY = e.deltaY;
-        var scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-        // console.log(scrollTop);
-        if (deltaY > 0) {
-            // console.log('Колесо миші рухається вниз');
-
-
-
-            if (secondBlock.classList.contains('hidden-block') &&  body.classList.contains('no-scroll')) {
-                isAnimationInProgress = true;
-                reinitializeAOS();
-
-                firstBlock.classList.add('hidden-block--2');
-
-                secondBlock.classList.remove('hidden-block');
-                secondBlock.classList.add('visible');
-
-
-                setTimeout(function() {
-                    isAnimationInProgress = false;
-                }, 2000);
-                setTimeout(function() {
-                    firstBlock.classList.remove('visible');
-
-                }, 1000);
-
-                return;
-            }
-
-            else if( pageBlock.classList.contains('hidden-page') &&  body.classList.contains('no-scroll')) {
-                isAnimationInProgress = true;
-                secondBlock.classList.add('hidden-block--2');
-
-                pageBlock.classList.remove('hidden-page');
-                pageBlock.classList.add('visible');
-
-                footerBlock.classList.add('black');
-                headerBlock.classList.add('black');
-
-                setTimeout(function() {
-                    secondBlock.classList.remove('visible');
-
-                }, 1000);
-
-                reinitializeAOS();
-                setTimeout(function() {
-                    body.classList.remove('no-scroll');
-                    window.scrollBy(0, 0.1);
-                }, 1050);
-
-
-                setTimeout(function() {
-
-                    isAnimationInProgress = false;
-                    console.log(isAnimationInProgress);
-                }, 2000);
-                reinitializeAOS();
-
-                return;
-            }
-
-        } else {
-            if (scrollTop == 0 && firstBlock.classList.contains('hidden-block--2') &&  body.classList.contains('no-scroll') && !secondBlock.classList.contains('hidden-block--2') ) {
-                isAnimationInProgress = true;
-                firstBlock.classList.remove('hidden-block--2');
-                firstBlock.classList.add('visible');
-
-                secondBlock.classList.add('hidden-block');
-                reinitializeAOS();
-
-                setTimeout(function() {
-                    secondBlock.classList.remove('visible');
-
-                }, 1000);
-
-
-                // Після завершення анімації скасувати позначку
-                setTimeout(function() {
-                    isAnimationInProgress = false;
-                    console.log(isAnimationInProgress);
-                }, 2000); // 2000 мс - приблизно час тривалості анімації (змініть за потребою)
-                return;
-            }
-
-            if(scrollTop == 0 && secondBlock.classList.contains('hidden-block--2') &&  !body.classList.contains('no-scroll')) {
-                isAnimationInProgress = true;
-                secondBlock.classList.remove('hidden-block--2');
-                secondBlock.classList.add('visible');
-                // window.scrollBy(0, 0.5);
-                body.classList.add('no-scroll');
-                pageBlock.classList.add('hidden-page');
-
-
-                setTimeout(function() {
-                    pageBlock.classList.remove('visible');
-
-                }, 1000);
-
-
-                // Після завершення анімації скасувати позначку
-                setTimeout(function() {
-                    isAnimationInProgress = false;
-                    console.log(isAnimationInProgress);
-                }, 2000); // 2000 мс - приблизно час тривалості анімації (змініть за потребою)
-                return;
-            }
+            secondBlock.style.display = 'flex';
+            pageBlock.style.display = 'block';
 
         }
-    });
-} else {
 
-    var lastTouchY = null;
-
-    document.addEventListener('touchstart', function(e) {
-    lastTouchY = e.touches[0].clientY;
-    });
-
-    document.addEventListener('touchmove', function(e) {
-    if (lastTouchY === null) {
-        return;
-    }
-
-    var currentTouchY = e.touches[0].clientY;
-
-    if (currentTouchY < lastTouchY) {
-        var scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-
-        // Скрол вниз
-        if (pageBlock.classList.contains('hidden-page')) {
-
-                isAnimationInProgress = true;
-                firstBlock.classList.add('hidden-block--2');
-
-                body.classList.add('blocked');
-                pageBlock.classList.remove('hidden-page');
-                pageBlock.classList.add('visible');
-
-                footerBlock.classList.add('black');
-                headerBlock.classList.add('black');
-
-
-                reinitializeAOS();
-                setTimeout(function() {
-                    body.classList.remove('blocked');
-                    body.classList.remove('no-scroll');
-                    firstBlock.classList.remove('visible');
-                    window.scrollBy(0, 0.1);
-                }, 1050);
-
-
-                setTimeout(function() {
-
-                    isAnimationInProgress = false;
-                    console.log(isAnimationInProgress);
-                }, 2000);
-                reinitializeAOS();
-
-                return;
-        }
-
-    } else if (currentTouchY > lastTouchY) {
-        // Скрол вгору
-        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        setTimeout(()=> {
+            initClassForBlocks();
+        }, 5000)
 
 
 
-        if (firstBlock.classList.contains('hidden-block--2') && scrollTop === 0) {
+
+    // console.log(btnSkip);
+
+        var isAnimationInProgress = false;
+
+
+        btnSkip.addEventListener('click', function() {
+            if (isAnimationInProgress) {
+                return; // Якщо анімація вже виконується, вийти з обробника
+            }
             isAnimationInProgress = true;
-            firstBlock.classList.remove('hidden-block--2');
-            firstBlock.classList.add('visible');
-            body.classList.add('blocked');
-            body.classList.add('no-scroll');
+            // Ваш код для обробки кліку тут
+            console.log('Клік на кнопці Skip!');
 
-            pageBlock.classList.add('hidden-page');
-            setTimeout(function() {
-                pageBlock.classList.remove('visible');
-                body.classList.add('blocked');
+            firstBlock.classList.add('hidden-block--2');
 
-            }, 1000);
+            secondBlock.classList.remove('hidden-block');
+            secondBlock.classList.add('visible');
 
             reinitializeAOS();
+            window.scrollBy(0, 0.1);
             setTimeout(function() {
 
-                window.scrollBy(0, 0.1);
-            }, 1050);
+                isAnimationInProgress = false;
+                console.log(isAnimationInProgress);
+            }, 2000);
+        });
 
+        btnSkip2.addEventListener('click', function() {
+            if (isAnimationInProgress) {
+                return; // Якщо анімація вже виконується, вийти з обробника
+            }
+            isAnimationInProgress = true;
+            // Ваш код для обробки кліку тут
+            console.log('Клік на кнопці Skip!');
+
+            secondBlock.classList.add('hidden-block--2');
+            secondBlock.classList.remove('visible');
+            footerBlock.classList.add('black');
+
+
+            pageBlock.classList.remove('hidden-page');
+            pageBlock.classList.add('visible');
+
+            reinitializeAOS();
+            window.scrollBy(0, 1);
+            setTimeout(function() {
+                body.classList.remove('no-scroll');
+                window.scrollBy(0, 0.1);
+                headerBlock.classList.add('black');
+            }, 1050);
 
             setTimeout(function() {
 
                 isAnimationInProgress = false;
                 console.log(isAnimationInProgress);
             }, 2000);
-            reinitializeAOS();
 
-            return;
+
+        });
+
+
+        /*скролл*/
+
+        if(windowWidth > 991) {
+            document.addEventListener('wheel', function(e) {
+                if (isAnimationInProgress) {
+                    return; // Якщо анімація вже виконується, вийти з обробника
+                }
+                var deltaY = e.deltaY;
+                var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                // console.log(scrollTop);
+                if (deltaY > 0) {
+                    // console.log('Колесо миші рухається вниз');
+
+
+
+                    if (secondBlock.classList.contains('hidden-block') &&  body.classList.contains('no-scroll')) {
+                        isAnimationInProgress = true;
+                        reinitializeAOS();
+
+                        firstBlock.classList.add('hidden-block--2');
+
+                        secondBlock.classList.remove('hidden-block');
+                        secondBlock.classList.add('visible');
+
+
+                        setTimeout(function() {
+                            isAnimationInProgress = false;
+                        }, 2000);
+                        setTimeout(function() {
+                            firstBlock.classList.remove('visible');
+
+                        }, 1000);
+
+                        return;
+                    }
+
+                    else if( pageBlock.classList.contains('hidden-page') &&  body.classList.contains('no-scroll')) {
+                        isAnimationInProgress = true;
+                        secondBlock.classList.add('hidden-block--2');
+
+                        pageBlock.classList.remove('hidden-page');
+                        pageBlock.classList.add('visible');
+
+                        footerBlock.classList.add('black');
+                        headerBlock.classList.add('black');
+
+                        setTimeout(function() {
+                            secondBlock.classList.remove('visible');
+
+                        }, 1000);
+
+                        reinitializeAOS();
+                        setTimeout(function() {
+                            body.classList.remove('no-scroll');
+                            window.scrollBy(0, 0.1);
+                        }, 1050);
+
+
+                        setTimeout(function() {
+
+                            isAnimationInProgress = false;
+                            console.log(isAnimationInProgress);
+                        }, 2000);
+                        reinitializeAOS();
+
+                        return;
+                    }
+
+                } else {
+                    if (scrollTop == 0 && firstBlock.classList.contains('hidden-block--2') &&  body.classList.contains('no-scroll') && !secondBlock.classList.contains('hidden-block--2') ) {
+                        isAnimationInProgress = true;
+                        firstBlock.classList.remove('hidden-block--2');
+                        firstBlock.classList.add('visible');
+
+                        secondBlock.classList.add('hidden-block');
+                        reinitializeAOS();
+
+                        setTimeout(function() {
+                            secondBlock.classList.remove('visible');
+
+                        }, 1000);
+
+
+                        // Після завершення анімації скасувати позначку
+                        setTimeout(function() {
+                            isAnimationInProgress = false;
+                            console.log(isAnimationInProgress);
+                        }, 2000); // 2000 мс - приблизно час тривалості анімації (змініть за потребою)
+                        return;
+                    }
+
+                    if(scrollTop == 0 && secondBlock.classList.contains('hidden-block--2') &&  !body.classList.contains('no-scroll')) {
+                        isAnimationInProgress = true;
+                        secondBlock.classList.remove('hidden-block--2');
+                        secondBlock.classList.add('visible');
+                        // window.scrollBy(0, 0.5);
+                        body.classList.add('no-scroll');
+                        pageBlock.classList.add('hidden-page');
+
+
+                        setTimeout(function() {
+                            pageBlock.classList.remove('visible');
+
+                        }, 1000);
+
+
+                        // Після завершення анімації скасувати позначку
+                        setTimeout(function() {
+                            isAnimationInProgress = false;
+                            console.log(isAnimationInProgress);
+                        }, 2000); // 2000 мс - приблизно час тривалості анімації (змініть за потребою)
+                        return;
+                    }
+
+                }
+            });
+        } else {
+
+            var lastTouchY = null;
+
+            document.addEventListener('touchstart', function(e) {
+            lastTouchY = e.touches[0].clientY;
+            });
+
+            document.addEventListener('touchmove', function(e) {
+            if (lastTouchY === null) {
+                return;
+            }
+
+            var currentTouchY = e.touches[0].clientY;
+
+            if (currentTouchY < lastTouchY) {
+                var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+
+                // Скрол вниз
+                if (pageBlock.classList.contains('hidden-page')) {
+
+                        isAnimationInProgress = true;
+                        firstBlock.classList.add('hidden-block--2');
+
+                        body.classList.add('blocked');
+                        pageBlock.classList.remove('hidden-page');
+                        pageBlock.classList.add('visible');
+
+                        footerBlock.classList.add('black');
+                        headerBlock.classList.add('black');
+
+
+                        reinitializeAOS();
+                        setTimeout(function() {
+                            body.classList.remove('blocked');
+                            body.classList.remove('no-scroll');
+                            firstBlock.classList.remove('visible');
+                            window.scrollBy(0, 0.1);
+                        }, 1050);
+
+
+                        setTimeout(function() {
+
+                            isAnimationInProgress = false;
+                            console.log(isAnimationInProgress);
+                        }, 2000);
+                        reinitializeAOS();
+
+                        return;
+                }
+
+            } else if (currentTouchY > lastTouchY) {
+                // Скрол вгору
+                var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+
+
+                if (firstBlock.classList.contains('hidden-block--2') && scrollTop === 0) {
+                    isAnimationInProgress = true;
+                    firstBlock.classList.remove('hidden-block--2');
+                    firstBlock.classList.add('visible');
+                    body.classList.add('blocked');
+                    body.classList.add('no-scroll');
+
+                    pageBlock.classList.add('hidden-page');
+                    setTimeout(function() {
+                        pageBlock.classList.remove('visible');
+                        body.classList.add('blocked');
+
+                    }, 1000);
+
+                    reinitializeAOS();
+                    setTimeout(function() {
+
+                        window.scrollBy(0, 0.1);
+                    }, 1050);
+
+
+                    setTimeout(function() {
+
+                        isAnimationInProgress = false;
+                        console.log(isAnimationInProgress);
+                    }, 2000);
+                    reinitializeAOS();
+
+                    return;
+                }
+            }
+
+            lastTouchY = currentTouchY;
+            });
         }
+
+    } else {
+        body.classList.remove('no-scroll');
+        pageBlock.classList.add('visible');
     }
-
-    lastTouchY = currentTouchY;
-    });
-}
-
-
 
 
 //
