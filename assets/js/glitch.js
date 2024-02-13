@@ -81,6 +81,9 @@ if(windowWidth > 991) {
     createGlitchEffect('glitch6', 240, 40, 12.5);
     createGlitchEffect('glitch7', 140, 40, 12.5);
     createGlitchEffect('glitch8', 240, 40, 12.5);
+    createGlitchEffect('glitch9', 240, 40, 12.5);
+    createGlitchEffect('glitch10', 140, 40, 12.5);
+    createGlitchEffect('glitch11', 240, 40, 12.5);
 
 }
 

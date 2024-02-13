@@ -611,9 +611,10 @@ $(document).ready(function () {
             modalMenuPage.removeClass('hidden').addClass('active');
             menuPopupLine.css('width', containerWidthWithBorders + 'px');
 
+          
+
             if(headerBlock.hasClass('black') && secondBlock.hasClass('hidden-block--2')) {
                 menuPopupLine.css({ 'background': '#121212'});
-
             }
 
             if(headerBlock.hasClass('white') && secondBlock.hasClass('hidden-block--2')) {
