@@ -5173,6 +5173,10 @@ body.blocked {
     transition-delay: .7s;
 }
 
+.screen.screen--project-about .block-content__text > p {
+  margin-bottom: 20px;
+}
+
 .screen.screen--project-about.active .block-content__text, .screen.screen--project-desc.active .block-content__desc  {
     transform: translateY(0%);
     opacity: 1;
@@ -5180,7 +5184,20 @@ body.blocked {
     transition-delay: .4s;
 }
 
+.screen.screen--project-desc .block-content__desc-mob {
+  display: none;
+  position: absolute;
+}
 
+.screen.screen--project-about .block-content__title-mob {
+  display: none;
+  position: absolute;
+}
+
+.screen.screen--project-about .block-content__text-mob {
+  display: none;
+  position: absolute;
+}
 
 .screen.screen--project-baner {
   padding-top: 271px;
@@ -5348,6 +5365,12 @@ body.blocked {
   opacity: 0;
   transition: all 1.2s linear;
   transition-delay: .5s;
+}
+
+.screen.screen--project-achievement .block-content__article-mob {
+  display: none;
+  position: absolute;
+
 }
 
 .screen.screen--project-achievement.active .block-content__article {
@@ -6106,7 +6129,7 @@ body.blocked {
     font-size: 7rem;
   }
 
-  .screen.screen--about-people.active .block-content__item-number {
+  .screen.screen--about-people .block-content__item-number {
     font-size: 12rem;
   }
 
@@ -6837,7 +6860,7 @@ body.blocked {
     font-size: 4rem;
   }
 
-  .screen.screen--about-people.active .block-content__item-number {
+  .screen.screen--about-people .block-content__item-number {
     font-size: 8rem;
   }
 
@@ -7118,7 +7141,7 @@ body.blocked {
     right: 0;
   }
 
-  .screen.screen--about-people.active .block-content__item-number {
+  .screen.screen--about-people .block-content__item-number {
     padding-top: 19px;
   }
 
@@ -7411,12 +7434,13 @@ body.blocked {
     }
 
     .screen.screen--project-baner {
-      padding-top: 91px;
-      padding-bottom: 100px;
+      padding-top: 61px;
+      padding-bottom: 70px;
     }
 
     .screen.screen--project-achievement {
       padding-top: 81px;
+      margin-bottom: -50px;
     }
 
     .screen.screen--project-start {
@@ -8209,6 +8233,107 @@ body.blocked {
 
   .screen.screen--project-desc .block-content {
     margin-top: 30px;
+  }
+
+  .screen.screen--project-about .block-content__title {
+    display: none;
+    position: absolute;
+  }
+
+  .screen.screen--project-about .block-content__text{
+    display: none;
+    position: absolute;
+  }
+
+  .screen.screen--project-about .block-content__title-mob {
+    display: block;
+    position: static;
+    margin-bottom: 20px;
+
+    font-family: var(--main);
+    font-weight: 900;
+    font-size: 2.6rem;
+    line-height: 110%;
+    letter-spacing: 1px;
+    color: var(--black);
+
+    text-transform: uppercase;
+  }
+
+  .screen.screen--project-about .block-content__text-mob {
+    display: block;
+    position: static;
+
+    font-family: var(--main);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 128%;
+    letter-spacing: 0;
+    color: var(--black);
+
+  }
+
+  .screen.screen--project-about .block-content__text-mob p {
+    margin-bottom: 15px;
+  }
+
+  .screen.screen--project-desc .block-content__desc {
+    display: none;
+    position: absolute;
+  }
+
+
+
+  .screen.screen--project-desc .block-content__desc-mob {
+    display: block;
+    position: static;
+    margin-bottom: 30px;
+
+    font-family: var(--main);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 128%;
+    letter-spacing: 0;
+    color: var(--black);
+
+  }
+
+  .screen.screen--project-desc .block-content__desc-mob > p {
+    margin-bottom: 15px;
+  }
+
+  .screen.screen--project-achievement .block-content__article {
+    display: none;
+    position: absolute;
+
+  }
+
+  .screen.screen--project-achievement .block-content__article-mob {
+    display: block;
+    position: static;
+
+    font-family: var(--main);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 126%;
+    color: var(--white);
+
+  }
+
+  .screen.screen--project-achievement .block-content__article-mob  ol {
+    padding-left: 25px;
+    margin-top: -15px;
+
+    list-style: disc;
+  }
+
+  .screen.screen--project-achievement .block-content__article-mob p {
+    margin-bottom: 15px;
+  }
+
+  .screen.screen--project-achievement .block-content__article-date {
+    display: none;
+    position: absolute;
   }
 
 
